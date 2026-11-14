@@ -1,0 +1,1955 @@
+<!-- ... eslint-disable -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi FKDM - SIPMONWIL</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        fkdm: {
+                            dark: '#06142e',
+                            navy: '#0b2249',
+                            blue: '#16428b',
+                            accent: '#2563eb',
+                            cyan: '#06b6d4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Future Technology Background & Animations */
+        .future-tech-bg {
+            background-color: #161523;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3CradialGradient id='centerGlow' cx='50%25' cy='48%25' r='55%25'%3E%3Cstop offset='0%25' stop-color='%2328263e'/%3E%3Cstop offset='100%25' stop-color='%2313121e'/%3E%3C/radialGradient%3E%3ClinearGradient id='topRightGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23facc15'/%3E%3Cstop offset='45%25' stop-color='%23f97316'/%3E%3Cstop offset='78%25' stop-color='%23ef4444'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3ClinearGradient id='botLeftGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='40%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%231d4ed8'/%3E%3C/linearGradient%3E%3ClinearGradient id='leftNeon' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231e3a8a'/%3E%3Cstop offset='28%25' stop-color='%2306b6d4'/%3E%3Cstop offset='65%25' stop-color='%23d946ef'/%3E%3Cstop offset='100%25' stop-color='%230284c7'/%3E%3C/linearGradient%3E%3ClinearGradient id='rightNeon' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ec4899'/%3E%3Cstop offset='35%25' stop-color='%23eab308'/%3E%3Cstop offset='70%25' stop-color='%23ef4444'/%3E%3Cstop offset='100%25' stop-color='%23d946ef'/%3E%3C/linearGradient%3E%3Cpattern id='hexPattern' width='120' height='208' patternUnits='userSpaceOnUse'%3E%3Cpath d='M60 0 L120 34.6 L120 103.9 L60 138.5 L0 103.9 L0 34.6 Z M60 138.5 L60 208' fill='none' stroke='%23ffffff' stroke-opacity='0.22' stroke-width='2'/%3E%3C/pattern%3E%3Cfilter id='dropShadow' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeDropShadow dx='0' dy='8' stdDeviation='18' flood-color='%23000000' flood-opacity='0.85'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1080' height='1920' fill='url(%23centerGlow)'/%3E%3Cpolygon points='540,0 1080,0 1080,640 845,420 845,270' fill='url(%23topRightGrad)'/%3E%3Crect x='720' y='0' width='360' height='360' fill='url(%23hexPattern)'/%3E%3Cpolygon points='0,1275 235,1495 235,1645 540,1920 0,1920' fill='url(%23botLeftGrad)'/%3E%3Crect x='0' y='1560' width='360' height='360' fill='url(%23hexPattern)'/%3E%3Cpolygon points='55,0 125,0 125,1150 285,1295 285,1410 55,1200' fill='url(%23leftNeon)'/%3E%3Cpolygon points='795,510 1025,720 1025,1920 955,1920 955,770 795,625' fill='url(%23rightNeon)'/%3E%3Cpolygon points='120,0 440,0 695,245 695,410 960,660 960,1920 660,1920 225,1515 225,1340 120,1245' fill='%23181726' filter='url(%23dropShadow)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='0.65' stroke-width='1.6' fill='none'%3E%3Cpolygon points='135,0 225,45 240,125 145,145 95,75'/%3E%3Cpolygon points='145,145 240,125 290,210 215,345 125,320 115,215'/%3E%3Cpolygon points='125,320 215,345 225,445 135,495 38,415 65,345'/%3E%3Cline x1='135' y1='0' x2='145' y2='145'/%3E%3Cline x1='225' y1='45' x2='145' y2='145'/%3E%3Cline x1='95' y1='75' x2='240' y2='125'/%3E%3Cline x1='115' y1='215' x2='240' y2='125'/%3E%3Cline x1='115' y1='215' x2='290' y2='210'/%3E%3Cline x1='145' y1='145' x2='215' y2='345'/%3E%3Cline x1='125' y1='320' x2='290' y2='210'/%3E%3Cline x1='125' y1='320' x2='225' y2='445'/%3E%3Cline x1='215' y1='345' x2='135' y2='495'/%3E%3Cline x1='38' y1='415' x2='215' y2='345'/%3E%3Cline x1='38' y1='415' x2='225' y2='445'/%3E%3Cpolygon points='915,1375 985,1425 995,1520 910,1545 875,1465'/%3E%3Cpolygon points='910,1545 995,1520 1065,1610 995,1745 885,1725 875,1625'/%3E%3Cpolygon points='885,1725 995,1745 985,1885 875,1920 790,1815 835,1750'/%3E%3Cline x1='915' y1='1375' x2='910' y2='1545'/%3E%3Cline x1='985' y1='1425' x2='910' y2='1545'/%3E%3Cline x1='875' y1='1465' x2='995' y2='1520'/%3E%3Cline x1='875' y1='1625' x2='995' y2='1520'/%3E%3Cline x1='875' y1='1625' x2='1065' y2='1610'/%3E%3Cline x1='910' y1='1545' x2='995' y2='1745'/%3E%3Cline x1='885' y1='1725' x2='1065' y2='1610'/%3E%3Cline x1='885' y1='1725' x2='985' y2='1885'/%3E%3Cline x1='995' y1='1745' x2='875' y2='1920'/%3E%3Cline x1='790' y1='1815' x2='995' y2='1745'/%3E%3Cline x1='790' y1='1815' x2='985' y2='1885'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .tech-bg {
+            background-color: #161523;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.25) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.2) 0px, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+        }
+        .tech-header {
+            background: rgba(22, 21, 35, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .glass-card {
+            background: rgba(22, 21, 35, 0.68);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+        .glass-menu-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+        }
+        .cctv-scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+            background-size: 100% 4px;
+        }
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .animate-live {
+            animation: pulse-live 1.5s infinite;
+        }
+        @keyframes neon-pulse {
+            0%, 100% {
+                box-shadow: 0 0 12px rgba(6, 182, 212, 0.8), 0 0 28px rgba(37, 99, 235, 0.7), inset 0 0 10px rgba(125, 211, 252, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(34, 211, 238, 1), 0 0 42px rgba(59, 130, 246, 0.95), inset 0 0 16px rgba(186, 230, 253, 0.65);
+            }
+        }
+        .btn-neon-blue {
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #06b6d4 100%);
+            border: 1.5px solid #7dd3fc;
+            animation: neon-pulse 2.2s infinite ease-in-out;
+        }
+        .btn-neon-blue:hover {
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #22d3ee 100%);
+            box-shadow: 0 0 25px rgba(34, 211, 238, 1), 0 0 50px rgba(37, 99, 235, 1);
+        }
+        .cover-bg {
+            background-color: #02040d;
+            background-image: 
+                radial-gradient(circle at 50% 85%, rgba(29, 78, 216, 0.45) 0%, rgba(14, 165, 233, 0.15) 32%, transparent 65%),
+                radial-gradient(circle at 50% 42%, rgba(30, 58, 138, 0.28) 0%, transparent 60%),
+                linear-gradient(180deg, #010208 0%, #03091e 50%, #020512 100%);
+        }
+        /* Mobile App Shell Styling */
+        .mobile-shell {
+            max-width: 430px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(6, 20, 46, 0.45);
+        }
+        @media (min-width: 640px) {
+            body {
+                background-color: #0f172a;
+                background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #090d16 100%);
+                padding: 16px 0;
+            }
+            .mobile-shell {
+                min-height: calc(100vh - 32px);
+                border-radius: 36px;
+                border: 6px solid #1e293b;
+                overflow-x: hidden;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-200 font-sans text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- ==================== MOBILE APP WRAPPER ==================== -->
+    <div id="mobile-frame" class="mobile-shell future-tech-bg flex flex-col">
+
+   <!-- ==================== 0. HALAMAN AWAL (COVER SPLASH SCREEN) ==================== -->
+<div id="cover-view" class="flex-1 relative overflow-hidden text-white select-none bg-black">
+    
+    <!-- Gambar Cover Full-Screen -->
+    <img src="cover.jpg" 
+         alt="SIPMONWIL - Sistem Informasi Pengendalian Monitoring Wilayah Kelurahan Petojo Utara" 
+         class="absolute inset-0 w-full h-full object-cover object-center">
+
+    <!-- Overlay gelap tipis agar tombol lebih jelas -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
+    <!-- Tombol MASUK Efek Neon Biru (di bagian bawah) -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center pb-10 pt-6">
+        <button onclick="enterLoginPage()" 
+                class="btn-neon-blue w-64 py-3.5 px-8 rounded-full text-white font-black text-base tracking-[0.2em] uppercase transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-3 cursor-pointer shadow-2xl">
+            <span>MASUK</span>
+            <i class="fa-solid fa-arrow-right-to-bracket text-cyan-200"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- ==================== 1. HALAMAN LOGIN ==================== -->
+    <div id="login-view" class="hidden flex-1 flex flex-col justify-center items-center p-5 relative overflow-hidden">
+        <!-- Decorative Tech Glow -->
+        <div class="absolute -top-24 -left-24 w-72 h-72 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="w-full z-10">
+   <!-- Banner / Logo SIPMONWIL -->
+<div class="mb-5 flex justify-center">
+    <div class="w-full rounded-3xl p-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 shadow-2xl shadow-blue-600/40 transform hover:scale-[1.01] transition duration-300">
+        <div class="relative rounded-[20px] overflow-hidden bg-[#02081c] border border-cyan-300/30 aspect-[16/9] flex items-center justify-center">
+            <img src="logo_sipmonwil.jpeg" 
+                 alt="SIPMONWIL Logo" 
+                 class="w-full h-full object-cover object-center">
+            <!-- Kilau Kaca Halus di Atas Banner -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 pointer-events-none"></div>
+        </div>
+    </div>
+</div>
+
+            <!-- Login Card -->
+            <div class="glass-card rounded-3xl p-5 shadow-2xl">
+                <div class="flex items-center justify-between border-b border-white/10 pb-3.5 mb-5">
+                    <h2 class="text-base font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-right-to-bracket text-cyan-400"></i> LOGIN SISTEM
+                    </h2>
+                    <span class="text-xs text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg"></span>
+                </div>
+
+                <!-- Error Alert Box -->
+                <div id="login-error" class="hidden mb-4 p-3 rounded-xl bg-red-500/20 border border-red-400/40 text-red-200 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-circle-exclamation text-red-400 text-base"></i>
+                    <span id="login-error-text">User ID atau Pass ID salah!</span>
+                </div>
+
+                <form id="login-form" onsubmit="handleLogin(event)" class="space-y-4">
+                    <div>
+                        <label for="userid" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">User ID</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" id="userid" required placeholder="Masukkan User ID"
+                                class="w-full pl-10 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition">
+                        </div>
+                    </div>
+
+                                        <div>
+                        <label for="passid" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Pass ID</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" id="passid" required placeholder="Masukkan Pass ID"
+                                class="w-full pl-10 pr-10 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition">
+                            <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-white">
+                                <i id="eye-icon" class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <button type="submit" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check"></i> Log In
+                        </button>
+                        <button type="button" onclick="resetLoginForm()" class="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-slate-200 font-semibold text-sm transition transform active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-xmark"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-5 flex flex-col items-center gap-2">
+                <button type="button" onclick="backToCover()" class="text-xs text-cyan-300 hover:text-cyan-200 flex items-center gap-1.5 transition">
+                    
+                </button>
+                <p class="text-center text-slate-400 text-xs">
+                    &copy; 2026 SIPMONWIL - Kelurahan Petojo Utara
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 2. APLIKASI UTAMA (SETELAH LOGIN) ==================== -->
+    <div id="app-view" class="hidden flex-1 flex flex-col relative">
+        
+        <!-- Sidebar Drawer Backdrop -->
+        <div id="sidebar-backdrop" onclick="toggleSidebar(false)" class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs z-40 hidden transition-opacity"></div>
+
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="absolute top-0 left-0 bottom-0 w-72 bg-fkdm-dark text-white z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl">
+            <div class="p-5 tech-header border-b border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-cyan-400 text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-sm tracking-wide">SIPMONWIL FKDM</div>
+                        <div class="text-[11px] text-cyan-300" id="sidebar-user-role">Pengurus FKDM &bull; Aktif</div>
+                    </div>
+                </div>
+                <button onclick="toggleSidebar(false)" class="p-2 rounded-lg text-slate-300 hover:bg-white/10">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+                <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">Menu Utama</div>
+                <button onclick="navigateTo('home'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-house w-5 text-cyan-400"></i> HOME (Beranda)
+                </button>
+                <a href="https://pusat.jakarta.go.id/revamp/kelurahan/kelurahan-petojo-utara" target="_blank" rel="noopener noreferrer" onclick="toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-building-flag w-5 text-blue-400"></i> Profil Kelurahan
+                </a>
+                <button onclick="navigateTo('cctv'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-video w-5 text-emerald-400"></i> Pemantauan CCTV
+                </button>
+                <button onclick="navigateTo('laporan'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-file-signature w-5 text-amber-400"></i> Laporan Kejadian
+                </button>
+                <button onclick="navigateTo('nomor'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-phone-volume w-5 text-rose-400"></i> Nomor Penting
+                </button>
+                <button onclick="navigateTo('informasi'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition text-left">
+                    <i class="fa-solid fa-bullhorn w-5 text-indigo-400"></i> Informasi & Berita
+                </button>
+
+                <div class="pt-4 mt-4 border-t border-white/10">
+                    <div class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">Pengelolaan Sistem</div>
+                    <button onclick="navigateTo('admin'); toggleSidebar(false)" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium bg-blue-600/20 text-cyan-300 border border-blue-500/30 hover:bg-blue-600/30 transition text-left">
+                        <i class="fa-solid fa-sliders w-5 text-cyan-400"></i> Admin Panel FKDM
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-white/10">
+                <button onclick="handleLogout()" class="w-full py-2.5 px-4 rounded-xl bg-red-600/90 hover:bg-red-600 text-white font-semibold text-sm flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Header Navigation -->
+        <header class="tech-header text-white sticky top-0 z-30 shadow-lg border-b border-white/10">
+            <div class="px-4 h-14 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <button onclick="toggleSidebar(true)" aria-label="Menu" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition">
+                        <i class="fa-solid fa-bars text-base"></i>
+                    </button>
+                    <div class="flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                        <h1 id="header-title" class="text-base font-extrabold tracking-wide uppercase">HOME</h1>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-cyan-400/20 text-cyan-200 border border-cyan-300/30 font-semibold">SIPMONWIL</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                    <button onclick="toggleGlobalSearch()" aria-label="Cari" title="Pencarian Cepat" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition">
+                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                    </button>
+                    <button onclick="handleRefresh()" aria-label="Refresh" title="Segarkan Data" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition">
+                        <i id="refresh-icon" class="fa-solid fa-rotate-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Global Search Bar Expandable -->
+            <div id="global-search-bar" class="hidden bg-fkdm-dark/95 border-t border-white/10 px-4 py-3">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                    <input type="text" id="global-search-input" oninput="performGlobalSearch(this.value)" placeholder="Cari CCTV, laporan, nomor darurat..."
+                        class="w-full pl-10 pr-10 py-2 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                    <button onclick="toggleGlobalSearch()" class="absolute right-3 top-2.5 text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="global-search-results" class="mt-2 space-y-1.5 empty:hidden"></div>
+            </div>
+        </header>
+
+        <!-- Main Content Container -->
+        <main class="flex-1 w-full px-4 py-5">
+            
+            <!-- ==================== SECTION: HOME ==================== -->
+            <section id="section-home" class="space-y-5">
+                <!-- Welcome Banner -->
+                <div class="rounded-3xl glass-card p-5 text-white shadow-xl relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/30 text-cyan-300 text-[10px] font-semibold">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Pemantauan Aktif
+                            </div>
+                            <div class="text-right font-mono text-xs text-cyan-300 font-bold" id="live-clock">20:19:00</div>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-extrabold leading-snug">Selamat Datang, <span id="welcome-user" class="text-cyan-300">Pengurus FKDM</span></h2>
+                            <p class="text-slate-300 text-[11px] mt-0.5">Kelurahan Petojo Utara &bull; Gambir</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Status Bar -->
+                    <div class="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-white/10 relative z-10 text-center">
+                        <div class="bg-white/5 rounded-2xl p-2.5">
+                            <div class="text-[10px] text-slate-300">CCTV</div>
+                            <div class="text-sm font-extrabold text-emerald-400 mt-0.5"><span id="stat-cctv-online">20</span>/20 Online</div>
+                        </div>
+                        <div class="bg-white/5 rounded-2xl p-2.5">
+                            <div class="text-[10px] text-slate-300">Laporan</div>
+                            <div class="text-sm font-extrabold text-amber-400 mt-0.5"><span id="stat-laporan-total">4</span> Masuk</div>
+                        </div>
+                        <div class="bg-white/5 rounded-2xl p-2.5">
+                            <div class="text-[10px] text-slate-300">Wilayah</div>
+                            <div class="text-sm font-extrabold text-cyan-300 mt-0.5">Aman</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 Menu Utama (Sesuai PRD 3.2 - Mobile Grid) -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm font-bold text-white flex items-center gap-2 drop-shadow">
+                            <i class="fa-solid fa-grip text-cyan-400"></i> Menu Utama FKDM
+                        </h3>
+                        <span class="text-[11px] text-slate-300">Pilih layanan</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <!-- 1. PROFIL KELURAHAN -->
+                        <a href="https://pusat.jakarta.go.id/revamp/kelurahan/kelurahan-petojo-utara" target="_blank" rel="noopener noreferrer" class="group glass-menu-card hover:bg-blue-600 rounded-3xl p-4 shadow-lg transition-all duration-200 flex flex-col items-center text-center">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-100 group-hover:bg-white/20 text-blue-600 group-hover:text-white flex items-center justify-center text-xl mb-2.5 transition">
+                                <i class="fa-solid fa-building-flag"></i>
+                            </div>
+                            <span class="font-extrabold text-xs text-slate-800 group-hover:text-white tracking-wide uppercase">PROFIL KELURAHAN</span>
+                            <span class="text-[10px] text-slate-500 group-hover:text-blue-100 mt-0.5">Website Resmi</span>
+                        </a>
+
+                        <!-- 2. CCTV -->
+                        <button onclick="navigateTo('cctv')" class="group glass-menu-card hover:bg-emerald-600 rounded-3xl p-4 shadow-lg transition-all duration-200 flex flex-col items-center text-center">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-100 group-hover:bg-white/20 text-emerald-600 group-hover:text-white flex items-center justify-center text-xl mb-2.5 transition">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <span class="font-extrabold text-xs text-slate-800 group-hover:text-white tracking-wide uppercase">CCTV</span>
+                            <span class="text-[10px] text-slate-500 group-hover:text-emerald-100 mt-0.5">Pantau Kamera</span>
+                        </button>
+
+                        <!-- 3. LAPORAN -->
+                        <button onclick="navigateTo('laporan')" class="group glass-menu-card hover:bg-amber-600 rounded-3xl p-4 shadow-lg transition-all duration-200 flex flex-col items-center text-center">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-100 group-hover:bg-white/20 text-amber-600 group-hover:text-white flex items-center justify-center text-xl mb-2.5 transition">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <span class="font-extrabold text-xs text-slate-800 group-hover:text-white tracking-wide uppercase">MONITORING LAPORAN</span>
+                            <span class="text-[10px] text-slate-500 group-hover:text-amber-100 mt-0.5">Input Kejadian</span>
+                        </button>
+
+                        <!-- 4. NOMOR PENTING -->
+                        <button onclick="navigateTo('nomor')" class="group glass-menu-card hover:bg-rose-600 rounded-3xl p-4 shadow-lg transition-all duration-200 flex flex-col items-center text-center">
+                            <div class="w-14 h-14 rounded-2xl bg-rose-100 group-hover:bg-white/20 text-rose-600 group-hover:text-white flex items-center justify-center text-xl mb-2.5 transition">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <span class="font-extrabold text-xs text-slate-800 group-hover:text-white tracking-wide uppercase">NOMOR PENTING</span>
+                            <span class="text-[10px] text-slate-500 group-hover:text-rose-100 mt-0.5">Kontak Darurat</span>
+                        </button>
+
+                        <!-- 5. INFORMASI -->
+                        <button onclick="navigateTo('informasi')" class="col-span-2 group glass-menu-card hover:bg-indigo-600 rounded-3xl p-4 shadow-lg transition-all duration-200 flex flex-row items-center justify-center gap-4 text-left">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-100 group-hover:bg-white/20 text-indigo-600 group-hover:text-white flex items-center justify-center text-xl shrink-0 transition">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <div class="font-extrabold text-xs text-slate-800 group-hover:text-white tracking-wide uppercase">INFORMASI & PENGUMUMAN</div>
+                                <div class="text-[10px] text-slate-500 group-hover:text-indigo-100 mt-0.5">Berita & Himbauan Kelurahan</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                
+            </section>
+
+            <!-- ==================== SECTION: 4.1 PROFIL KELURAHAN ==================== -->
+            <section id="section-profil" class="hidden space-y-4">
+                <div class="flex items-center justify-between">
+                    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Profil Wilayah</span>
+                </div>
+
+                <!-- Banner Kantor Kelurahan -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200">
+                    <div class="relative h-44 bg-slate-800">
+                        <img src="https://placehold.co/800x400/0b2249/38bdf8?text=Kantor+Kelurahan+Sunter+Agung" alt="Kantor Kelurahan" class="w-full h-full object-cover opacity-85">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                        <div class="absolute bottom-3 left-4 right-4 text-white">
+                            <span class="px-2 py-0.5 rounded-md bg-blue-600 text-[10px] font-bold uppercase">Pemprov DKI Jakarta</span>
+                            <h2 id="profil-nama" class="text-lg font-extrabold mt-1">Kelurahan Sunter Agung</h2>
+                            <p id="profil-alamat" class="text-[11px] text-slate-200 flex items-center gap-1 mt-0.5">
+                                <i class="fa-solid fa-location-dot text-cyan-400"></i> Jl. Danau Sunter Utara Blok G, Tanjung Priok
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Statistik Demografi -->
+                    <div class="grid grid-cols-2 divide-x divide-y divide-slate-200 bg-slate-50 border-b border-slate-200">
+                        <div class="p-3 text-center">
+                            <div class="text-[11px] text-slate-500 font-medium">Penduduk</div>
+                            <div id="profil-penduduk" class="text-base font-extrabold text-blue-700 mt-0.5">84.520 Jiwa</div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <div class="text-[11px] text-slate-500 font-medium">Kepala Keluarga</div>
+                            <div id="profil-kk" class="text-base font-extrabold text-blue-700 mt-0.5">26.410 KK</div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <div class="text-[11px] text-slate-500 font-medium">RW / RT</div>
+                            <div id="profil-rtrw" class="text-base font-extrabold text-blue-700 mt-0.5">20 RW / 248 RT</div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <div class="text-[11px] text-slate-500 font-medium">Luas Wilayah</div>
+                            <div id="profil-luas" class="text-base font-extrabold text-blue-700 mt-0.5">7,02 km&sup2;</div>
+                        </div>
+                    </div>
+
+                    <!-- Detail Profil -->
+                    <div class="p-4 space-y-4">
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-blue-700 mb-1.5">Pimpinan Kelurahan</h3>
+                            <div class="p-3 rounded-2xl bg-blue-50/70 border border-blue-100 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <div id="profil-lurah" class="font-bold text-xs text-slate-800">H. Teguh Subroto, S.STP, M.Si</div>
+                                    <div class="text-[11px] text-slate-500">Lurah Kelurahan Sunter Agung</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                                <h4 class="font-bold text-slate-800 text-xs mb-1 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bullseye text-blue-600"></i> Visi
+                                </h4>
+                                <p id="profil-visi" class="text-xs text-slate-600 leading-relaxed">
+                                    Terwujudnya Kelurahan Petojo Utara yang aman, tertib, tangguh terhadap potensi kerawanan sosial, dan melayani masyarakat secara prima.
+                                </p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                                <h4 class="font-bold text-slate-800 text-xs mb-1 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-list-check text-blue-600"></i> Misi
+                                </h4>
+                                <ul id="profil-misi" class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                                    <li>Meningkatkan deteksi dini & cegah dini bersama FKDM.</li>
+                                    <li>Memperkuat sinergi Tiga Pilar & elemen warga.</li>
+                                    <li>Digitalisasi informasi dan pelaporan wilayah.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-xs mb-1.5">Sejarah Singkat & Geografis</h4>
+                            <p id="profil-sejarah" class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
+                                Kelurahan Petojo Utara merupakan kawasan strategis di Jakarta Pusat yang memadukan area permukiman padat, kawasan industri/perkantoran, dan ruang terbuka hijau Danau Sunter (6°08'22"LS 106°52'14"BT).
+                            </p>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                            <h4 class="font-bold text-slate-800 text-xs mb-2 flex items-center gap-1.5">
+                                <i class="fa-solid fa-compass text-blue-600"></i> Batas Wilayah
+                            </h4>
+                            <ul class="text-xs space-y-1.5 text-slate-600">
+                                <li class="flex justify-between border-b border-slate-200 pb-1"><span class="font-semibold">Utara:</span> <span>Kel. Papanggo & Tanjung Priok</span></li>
+                                <li class="flex justify-between border-b border-slate-200 pb-1"><span class="font-semibold">Selatan:</span> <span>Kel. Kemayoran & Sumur Batu</span></li>
+                                <li class="flex justify-between border-b border-slate-200 pb-1"><span class="font-semibold">Timur:</span> <span>Kel. Sunter Jaya</span></li>
+                                <li class="flex justify-between"><span class="font-semibold">Barat:</span> <span>Kel. Pademangan Timur</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+                            <div class="p-3 bg-white border-b border-slate-200 flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-700"><i class="fa-solid fa-map-location-dot text-blue-600 mr-1"></i> Peta Lokasi</span>
+                                <a href="https://maps.google.com/?q=Kelurahan+Sunter+Agung" target="_blank" class="text-[11px] text-blue-600 font-semibold hover:underline">Buka Maps</a>
+                            </div>
+                            <div class="relative h-40 bg-blue-950 flex flex-col items-center justify-center text-white p-4 text-center">
+                                <i class="fa-solid fa-map-pin text-2xl text-rose-500 mb-1.5 animate-bounce"></i>
+                                <div class="text-xs font-bold">Koordinat Kantor Kelurahan</div>
+                                <div class="text-[11px] text-cyan-300 font-mono mt-0.5">-6.139444, 106.870556</div>
+                                <a href="https://maps.google.com/?q=-6.139444,106.870556" target="_blank" class="mt-2.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-xs font-semibold transition">
+                                    Lihat Rute Navigasi
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SECTION: 4.2 CCTV ==================== -->
+            <section id="section-cctv" class="hidden space-y-4">
+                <div class="flex items-center justify-between gap-2">
+    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200 shrink-0">
+        <i class="fa-solid fa-arrow-left"></i> Kembali
+    </button>
+    <select id="filter-cctv-kategori" onchange="renderCCTV()" class="text-xs bg-white border border-slate-200 rounded-xl px-2.5 py-2 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-[200px]">
+        <option value="Semua">Semua Kategori</option>
+        <option value="Kantor Kelurahan">Kantor Kelurahan</option>
+        <option value="Jalan utama">Jalan utama</option>
+        <option value="Area permukiman">Area permukiman</option>
+        <option value="Fasilitas umum">Fasilitas umum</option>
+        <option value="Area rawan gangguan keamanan">Area rawan gangguan</option>
+    </select>
+</div>
+
+                <div class="bg-blue-900 text-white rounded-2xl p-3 flex items-center justify-between text-[11px]">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-cat text-cyan-400 text-base"></i>
+                        <span>Streaming HLS/WebRTC Terenkripsi</span>
+                    </div>
+                    <span class="font-mono text-cyan-300">RTSP-GW</span>
+                </div>
+
+                <div id="cctv-grid" class="grid grid-cols-1 gap-4"></div>
+            </section>
+
+            <!-- ==================== SECTION: 4.3 LAPORAN ==================== -->
+            <section id="section-laporan" class="hidden space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <a href="https://s.id/e-fkdm-v01" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 px-3.5 py-2 rounded-xl shadow-md transition">
+                        <i class="fa-solid fa-plus"></i> Buat Laporan
+                    </a>
+                </div>
+
+                <!-- Banner Header FKDM (Mengadaptasi FKDM.jpg) -->
+                <div class="rounded-3xl overflow-hidden shadow-xl border border-white/20 bg-[#18181b] relative">
+                    <svg viewBox="0 0 800 285" class="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="darkCubes" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <rect width="40" height="40" fill="#18181b"/>
+                                <rect x="1" y="1" width="18" height="18" fill="#232327" stroke="#09090b" stroke-width="1"/>
+                                <rect x="21" y="1" width="18" height="18" fill="#1c1c20" stroke="#09090b" stroke-width="1"/>
+                                <rect x="1" y="21" width="18" height="18" fill="#151518" stroke="#09090b" stroke-width="1"/>
+                                <rect x="21" y="21" width="18" height="18" fill="#27272a" stroke="#09090b" stroke-width="1"/>
+                            </pattern>
+                            <radialGradient id="bannerVignette" cx="50%" cy="50%" r="60%">
+                                <stop offset="0%" stop-color="#000000" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#000000" stop-opacity="0.72"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Background Kubus Hitam 3D -->
+                        <rect width="800" height="285" fill="url(#darkCubes)"/>
+                        <rect width="800" height="285" fill="url(#bannerVignette)"/>
+
+                        <!-- Baris 6 Emblem Resmi -->
+                        <g transform="translate(225, 14)">
+                            <!-- 1. Jaya Raya -->
+                            <g transform="translate(0, 0)">
+                                <path d="M6,4 L44,4 L42,36 C41,46 25,54 25,54 C25,54 9,46 8,36 Z" fill="#1d4ed8" stroke="#facc15" stroke-width="2.5"/>
+                                <rect x="7" y="4" width="36" height="7" fill="#facc15"/>
+                                <polygon points="23,16 27,16 28,37 22,37" fill="#ffffff"/>
+                                <circle cx="25" cy="14" r="2" fill="#facc15"/>
+                                <path d="M16,42 Q25,38 34,42" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+                            </g>
+                            <!-- 2. Metro Jaya -->
+                            <g transform="translate(58, 0)">
+                                <path d="M8,6 L25,2 L42,6 L40,36 C38,46 25,54 25,54 C25,54 12,46 10,36 Z" fill="#eab308" stroke="#facc15" stroke-width="2"/>
+                                <path d="M25,2 L42,6 L40,36 C38,46 25,54 25,54 Z" fill="#dc2626"/>
+                                <circle cx="25" cy="29" r="9" fill="#16a34a" stroke="#ffffff" stroke-width="1.2"/>
+                                <rect x="24" y="23" width="2" height="11" fill="#ffffff"/>
+                            </g>
+                            <!-- 3. Jayakarta -->
+                            <g transform="translate(116, 0)">
+                                <path d="M7,5 L43,5 L41,36 C39,46 25,54 25,54 C25,54 11,46 9,36 Z" fill="#15803d" stroke="#86efac" stroke-width="2.2"/>
+                                <polygon points="25,13 27,19 33,19 28,23 30,29 25,25 20,29 22,23 17,19 23,19" fill="#facc15"/>
+                                <path d="M14,36 Q25,29 36,36 Q25,42 14,36 Z" fill="#ffffff"/>
+                            </g>
+                            <!-- 4. Satpol PP -->
+                            <g transform="translate(174, 0)">
+                                <path d="M7,5 L43,5 L41,36 C39,46 25,54 25,54 C25,54 11,46 9,36 Z" fill="#1e3a8a" stroke="#facc15" stroke-width="2.2"/>
+                                <circle cx="25" cy="27" r="11" fill="none" stroke="#facc15" stroke-width="2"/>
+                                <circle cx="25" cy="27" r="5" fill="#facc15"/>
+                                <rect x="15" y="42" width="20" height="6" rx="2" fill="#dc2626"/>
+                            </g>
+                            <!-- 5. FKDM -->
+                            <g transform="translate(232, 0)">
+                                <path d="M8,6 Q25,1 42,6 L40,37 C38,46 25,54 25,54 C25,54 12,46 10,37 Z" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+                                <circle cx="25" cy="27" r="12" fill="#1d4ed8" stroke="#ffffff" stroke-width="1.2"/>
+                                <rect x="24" y="19" width="2" height="14" fill="#ffffff"/>
+                            </g>
+                            <!-- 6. Kelurahan Petojo Utara -->
+                            <g transform="translate(290, 0)">
+                                <circle cx="25" cy="28" r="24" fill="#1d4ed8" stroke="#facc15" stroke-width="3"/>
+                                <circle cx="25" cy="28" r="17" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                                <polygon points="22,16 28,16 30,40 20,40" fill="#ffffff"/>
+                            </g>
+                        </g>
+
+                        <!-- Teks Judul Utama -->
+                        <text x="400" y="98" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#facc15" letter-spacing="0.8">OPTIMALISASI PERAN</text>
+                        <text x="400" y="131" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="29" fill="#ffffff" letter-spacing="0.5">FORUM KEWASPADAAN DINI MASYARAKAT</text>
+                        <text x="400" y="164" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="29" fill="#facc15">(FKDM)</text>
+
+                        <!-- Subjudul -->
+                        <text x="400" y="196" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-style="italic" font-size="16" fill="#f8fafc">DALAM MENCEGAH TAWURAN WARGA MELALUI SISTEM INFORMASI</text>
+                        <text x="400" y="220" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-style="italic" font-size="16" fill="#f8fafc">
+                            PENGENDALIAN DAN MONITORING WILAYAH <tspan fill="#facc15" font-weight="900">(SIPMONWIL)</tspan>
+                        </text>
+                        <text x="400" y="244" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-style="italic" font-size="16" fill="#f8fafc">DI KELURAHAN PETOJO UTARA</text>
+
+                        <!-- Slogan Pojok Kanan Bawah -->
+                        <g transform="translate(725, 236)" font-family="'Inter', sans-serif" font-weight="800" font-size="8.5" fill="#ffffff">
+                            <text x="0" y="0">SUKSES</text>
+                            <text x="0" y="10">JAKARTA</text>
+                            <text x="0" y="20">UNTUK</text>
+                            <text x="0" y="30">INDONESIA</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Daftar Nama Petugas & Link Embed Laporan Spreadsheet -->
+                <div class="glass-menu-card rounded-3xl p-4 shadow-lg space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
+                        <div>
+                            <h3 class="font-extrabold text-sm text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-table-list text-emerald-600"></i> Laporan Monitoring Petugas FKDM
+                            </h3>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Klik nama petugas di bawah untuk membuka lembar laporan</p>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-[10px] font-bold">7 Personel</span>
+                    </div>
+
+                    <div id="petugas-laporan-grid" class="grid grid-cols-1 gap-2.5"></div>
+                </div>
+
+                <!-- Container Embed Spreadsheet Aktif -->
+                <div id="laporan-embed-container" class="hidden bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <div class="p-3.5 tech-header text-white flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <div class="w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-file-excel text-emerald-400 text-sm"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <div class="text-[10px] text-cyan-300 font-semibold uppercase tracking-wider">Lembar Laporan Aktif</div>
+                                <h4 id="laporan-embed-title" class="font-bold text-xs text-white truncate">Laporan Petugas</h4>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5 shrink-0">
+                            <a id="laporan-embed-ext" href="#" target="_blank" rel="noopener noreferrer" title="Buka di Tab Baru" class="p-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <button onclick="closeLaporanEmbed()" title="Tutup Embed" class="p-2 rounded-xl bg-white/10 hover:bg-rose-600 text-white text-xs transition">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-[460px] bg-slate-100">
+                        <iframe id="laporan-embed-iframe" src="" class="w-full h-full border-0" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================== SECTION: 4.4 NOMOR PENTING ==================== -->
+            <section id="section-nomor" class="hidden space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200 shrink-0">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <div class="relative flex-1">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                        <input type="text" id="search-nomor" oninput="renderNomorPenting()" placeholder="Cari instansi/nomor..."
+                            class="w-full pl-8 pr-3 py-2 rounded-xl bg-white border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div id="nomor-grid" class="grid grid-cols-1 gap-3.5"></div>
+            </section>
+
+            <!-- ==================== SECTION: 4.5 INFORMASI ==================== -->
+            <section id="section-informasi" class="hidden space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200 shrink-0">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <select id="filter-info-kategori" onchange="renderInformasi()" class="text-xs bg-white border border-slate-200 rounded-xl px-2.5 py-2 font-medium text-slate-700 max-w-[190px]">
+                        <option value="Semua">Semua Kategori</option>
+                        <option value="Sosial Media">Sosial Media Resmi</option>
+                        <option value="Zonasi & Penduduk">Zonasi & Penduduk</option>
+                    </select>
+                </div>
+
+                <!-- Kartu Tautan Sosial Media Resmi Kelurahan Petojo Utara -->
+                <div class="glass-menu-card rounded-3xl p-4 shadow-lg space-y-3">
+                    <h3 class="font-extrabold text-sm text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-share-nodes text-indigo-600"></i> Media Sosial Resmi Kelurahan Petojo Utara
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- INSTAGRAM -->
+<a href="https://www.instagram.com/kel.petojoutara" target="_blank" rel="noopener noreferrer"
+   class="group p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-pink-500 shadow-xs hover:shadow-md transition flex flex-col justify-between gap-3">
+    <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm overflow-hidden">
+            <img src="ikon_instagram.png" alt="Instagram"
+                 class="w-full h-full object-contain p-1">
+        </div>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-pink-50 text-pink-600">Official</span>
+    </div>
+    <div>
+        <div class="font-bold text-xs text-slate-800 group-hover:text-pink-600 transition">Instagram Kelurahan</div>
+        <div class="text-[10px] text-slate-500 truncate mt-0.5">@kel.petojoutara</div>
+    </div>
+</a>
+
+<!-- FACEBOOK -->
+<a href="https://www.facebook.com/share/19V2hFTSTs/" target="_blank" rel="noopener noreferrer"
+   class="group p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-blue-600 shadow-xs hover:shadow-md transition flex flex-col justify-between gap-3">
+    <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm overflow-hidden">
+            <img src="ikon_fb.png" alt="Facebook"
+                 class="w-full h-full object-contain p-1">
+        </div>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-blue-50 text-blue-600">Official</span>
+    </div>
+    <div>
+        <div class="font-bold text-xs text-slate-800 group-hover:text-blue-600 transition">Facebook Kelurahan</div>
+        <div class="text-[10px] text-slate-500 truncate mt-0.5">Kelurahan Petojo Utara</div>
+    </div>
+</a>
+
+<!-- YOUTUBE -->
+<a href="https://www.youtube.com/@kelurahanpetojoutara8338" target="_blank" rel="noopener noreferrer"
+   class="group p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-red-600 shadow-xs hover:shadow-md transition flex flex-col justify-between gap-3">
+    <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm overflow-hidden">
+            <img src="ikon_youtube.png" alt="YouTube"
+                 class="w-full h-full object-contain p-1">
+        </div>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-red-50 text-red-600">Official</span>
+    </div>
+    <div>
+        <div class="font-bold text-xs text-slate-800 group-hover:text-red-600 transition">YouTube Channel</div>
+        <div class="text-[10px] text-slate-500 truncate mt-0.5">@kelurahanpetojoutara8338</div>
+    </div>
+</a>
+                    </div>
+                </div>
+
+                
+<!-- PETA ZONASI & DATA KEPENDUDUKAN -->
+<div class="grid grid-cols-1 gap-4">
+
+    <!-- 1. PETA ZONASI POTENSI TAWURAN -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200 space-y-3">
+        <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-bold text-[11px]">
+                Zonasi Keamanan
+            </span>
+            <span class="text-slate-400 text-[11px]">Peta Resmi FKDM</span>
+        </div>
+
+        <h4 class="font-bold text-sm sm:text-base text-slate-800">
+            Peta Titik Pemantauan Potensi Tawuran Kelurahan Petojo Utara
+        </h4>
+
+        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer relative group"
+             onclick="openImageModal('Peta Titik Pemantauan Potensi Tawuran', 'peta_zonasi_potensi_tawuran.jpeg')">
+
+            <img src="peta_zonasi_potensi_tawuran.jpeg"
+                 alt="Peta Zonasi Potensi Tawuran"
+                 class="w-full h-auto object-contain group-hover:scale-105 transition duration-300">
+
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus text-base"></i>
+                Klik untuk Perbesar Peta
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-600 leading-relaxed">
+            Pemetaan titik rawan dan zona pemantauan potensi tawuran warga di Kelurahan Petojo Utara, Kecamatan Gambir, Jakarta Pusat.
+        </p>
+    </div>
+
+    <!-- 2. PETA KEPADATAN PENDUDUK -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200 space-y-3">
+        <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 font-bold text-[11px]">
+                Demografi Wilayah
+            </span>
+            <span class="text-slate-400 text-[11px]">Peta Kependudukan</span>
+        </div>
+
+        <h4 class="font-bold text-sm sm:text-base text-slate-800">
+            Peta Demografi Kepadatan Penduduk Kelurahan Petojo Utara
+        </h4>
+
+        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer relative group"
+             onclick="openImageModal('Peta Demografi Kepadatan Penduduk', 'peta_kepadatan_penduduk.jpeg')">
+
+            <img src="peta_kepadatan_penduduk.jpeg"
+                 alt="Peta Kepadatan Penduduk"
+                 class="w-full h-auto object-contain group-hover:scale-105 transition duration-300">
+
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus text-base"></i>
+                Klik untuk Perbesar Peta
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-600 leading-relaxed">
+            Klasifikasi wilayah berdasarkan tingkat kepadatan penduduk (Padat, Sedang, Tidak Padat) per RW di Kelurahan Petojo Utara.
+        </p>
+    </div>
+
+    <!-- 3. TABEL JUMLAH PENDUDUK -->
+    <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200 space-y-3">
+        <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-[11px]">
+                Statistik Penduduk
+            </span>
+            <span class="text-slate-400 text-[11px]">Data Kependudukan</span>
+        </div>
+
+        <h4 class="font-bold text-sm sm:text-base text-slate-800">
+            Tabel Jumlah KK dan Penduduk Berdasarkan RW
+        </h4>
+
+        <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer relative group"
+             onclick="openImageModal('Tabel Jumlah Penduduk Per RW', 'tabel_jumlah_penduduk.jpeg')">
+
+            <img src="tabel_jumlah_penduduk.jpeg"
+                 alt="Tabel Jumlah Penduduk"
+                 class="w-full h-auto object-contain group-hover:scale-105 transition duration-300">
+
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus text-base"></i>
+                Klik untuk Perbesar Tabel
+            </div>
+        </div>
+
+        <p class="text-xs text-slate-600 leading-relaxed">
+            Rekapitulasi jumlah Kepala Keluarga (Dukcapil De Jure & Real De Facto) serta total jumlah penduduk per RW di Kelurahan Petojo Utara.
+        </p>
+    </div>
+
+</div>
+
+
+                <div id="informasi-grid" class="grid grid-cols-1 gap-3.5 pt-2"></div>
+            </section>
+
+            <!-- ==================== SECTION: 5. ADMIN PANEL ==================== -->
+            <section id="section-admin" class="hidden space-y-4">
+                <div class="flex items-center justify-between gap-2">
+                    <button onclick="navigateTo('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 bg-white px-3.5 py-2 rounded-xl shadow-xs border border-slate-200">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali
+                    </button>
+                    <span class="px-2.5 py-1 rounded-xl bg-blue-100 text-blue-800 text-[11px] font-bold">
+                        <i class="fa-solid fa-user-shield mr-1"></i> Admin Panel
+                    </span>
+                </div>
+
+                <!-- Admin Tabs -->
+                <div class="flex gap-1.5 overflow-x-auto pb-1">
+                    <button onclick="switchAdminTab('cctv')" class="admin-tab-btn px-3 py-1.5 rounded-xl text-[11px] font-bold bg-blue-600 text-white shrink-0">Manajemen CCTV</button>
+                    <button onclick="switchAdminTab('nomor')" class="admin-tab-btn px-3 py-1.5 rounded-xl text-[11px] font-bold bg-white text-slate-600 border border-slate-200 shrink-0">Manajemen Nomor Penting</button>
+                    <button onclick="switchAdminTab('info')" class="admin-tab-btn px-3 py-1.5 rounded-xl text-[11px] font-bold bg-white text-slate-600 border border-slate-200 shrink-0">Manajemen Informasi</button>
+                    <button onclick="switchAdminTab('users')" class="admin-tab-btn px-3 py-1.5 rounded-xl text-[11px] font-bold bg-white text-slate-600 border border-slate-200 shrink-0">Manajemen Pengguna (RBAC)</button>
+                </div>
+
+                <div id="admin-content" class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200"></div>
+            </section>
+
+        </main>
+
+        <!-- Footer (Sesuai PRD 3.2) -->
+        <footer class="tech-header text-slate-300 mt-6 border-t border-white/10">
+            <div class="px-4 py-5 flex flex-col items-center text-center gap-2">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-blue-600/30 border border-cyan-400/30 flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-cyan-400 text-xs"></i>
+                    </div>
+                    <span class="text-xs font-bold text-white">Sistem Informasi FKDM (SIPMONWIL)</span>
+                </div>
+                <div class="text-[10px] text-slate-400">
+                    &copy; 2026 Forum Kewaspadaan Dini Masyarakat. Hak Cipta Dilindungi.
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div> <!-- End Mobile App Wrapper -->
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Modal Form Laporan Baru -->
+    <div id="modal-laporan" class="fixed inset-0 bg-slate-900/75 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-[400px] w-full max-h-[88vh] overflow-y-auto shadow-2xl">
+            <div class="p-5 tech-header text-white flex items-center justify-between sticky top-0">
+                <h3 class="font-bold text-base flex items-center gap-2">
+                    <i class="fa-solid fa-file-circle-plus text-cyan-300"></i> Input Laporan Kejadian FKDM
+                </h3>
+                <button onclick="closeModal('modal-laporan')" class="text-white/80 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <form onsubmit="submitLaporan(event)" class="p-5 space-y-3.5 text-sm">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">ID Laporan (Otomatis)</label>
+                        <input type="text" id="lap-id" readonly class="w-full px-3 py-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-500 font-mono text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Kategori Kejadian</label>
+                        <select id="lap-kategori" required class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs font-medium">
+                            <option value="Keamanan dan Ketertiban">Keamanan dan Ketertiban</option>
+                            <option value="Konflik Sosial">Konflik Sosial</option>
+                            <option value="Bencana Alam">Bencana Alam</option>
+                            <option value="Kebakaran">Kebakaran</option>
+                            <option value="Gangguan Lingkungan">Gangguan Lingkungan</option>
+                            <option value="Aktivitas Mencurigakan">Aktivitas Mencurigakan</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Nama Pelapor</label>
+                        <input type="text" id="lap-nama" required placeholder="Nama lengkap" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Nomor HP / WA</label>
+                        <input type="tel" id="lap-hp" required placeholder="0812xxxxxxxx" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Lokasi Kejadian</label>
+                    <input type="text" id="lap-lokasi" required placeholder="Contoh: Jl. Danau Sunter Barat RT 04/RW 02" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Deskripsi Kronologi</label>
+                    <textarea id="lap-deskripsi" rows="3" required placeholder="Jelaskan detail kejadian secara singkat dan jelas..." class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs"></textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Foto Dokumentasi (Opsional)</label>
+                    <input type="file" id="lap-foto" accept="image/*" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" onclick="closeModal('modal-laporan')" class="px-4 py-2 rounded-xl border border-slate-200 text-slate-600 text-xs font-semibold">Batal</button>
+                    <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md">Kirim Laporan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal CCTV Fullscreen -->
+    <div id="modal-cctv" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col justify-between p-4">
+        <div class="flex items-center justify-between text-white max-w-[410px] w-full mx-auto">
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded bg-red-600 text-[10px] font-bold uppercase animate-live">LIVE</span>
+                    <h3 id="modal-cctv-title" class="font-bold text-sm">CCTV Lokasi</h3>
+                </div>
+                <p id="modal-cctv-coord" class="text-[11px] text-slate-400 font-mono mt-0.5"></p>
+            </div>
+            <button onclick="closeModal('modal-cctv')" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white">
+                <i class="fa-solid fa-compress text-base"></i>
+            </button>
+        </div>
+        <div class="max-w-[410px] w-full mx-auto my-auto aspect-video bg-slate-900 rounded-2xl overflow-hidden relative border border-white/20 flex items-center justify-center">
+            <iframe id="cctv-fullscreen-iframe" src="" class="w-full h-full border-0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="absolute top-3 left-3 bg-black/60 px-2.5 py-1 rounded-lg text-[10px] font-mono text-emerald-400 border border-emerald-500/30 pointer-events-none">
+                DISKOMINFOTIK &bull; LIVE STREAM
+            </div>
+            <div id="modal-cctv-clock" class="absolute bottom-3 right-3 bg-black/60 px-2.5 py-1 rounded-lg text-[10px] font-mono text-white pointer-events-none"></div>
+        </div>
+        <div class="flex flex-col items-center gap-2 text-center text-xs text-slate-400">
+            <a id="modal-cctv-ext-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Stream di Tab Baru
+            </a>
+            <span>Tekan tombol tutup di kanan atas untuk keluar.</span>
+        </div>
+    </div>
+
+    <!-- Modal Detail Informasi -->
+    <div id="modal-info" class="fixed inset-0 bg-slate-900/75 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-[400px] w-full overflow-hidden shadow-2xl">
+            <div class="p-5 tech-header text-white flex items-center justify-between">
+                <span id="modal-info-kat" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-200 text-xs font-bold">Kategori</span>
+                <button onclick="closeModal('modal-info')" class="text-white/80 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="p-6 space-y-3">
+                <div id="modal-info-tgl" class="text-xs text-slate-400"></div>
+                <h3 id="modal-info-judul" class="text-lg font-extrabold text-slate-800"></h3>
+                <p id="modal-info-isi" class="text-sm text-slate-600 leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Zoom Gambar Peta / Tabel -->
+    <div id="modal-image-zoom" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col justify-between p-4">
+        <div class="flex items-center justify-between text-white max-w-[600px] w-full mx-auto">
+            <h3 id="modal-zoom-title" class="font-bold text-sm truncate">Detail Peta / Tabel</h3>
+            <button onclick="closeModal('modal-image-zoom')" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white shrink-0">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <div class="max-w-[600px] w-full mx-auto my-auto overflow-auto max-h-[80vh] flex items-center justify-center p-2">
+            <img id="modal-zoom-img" src="" alt="Zoom Image" class="max-w-full max-h-full object-contain rounded-2xl">
+        </div>
+        <div class="text-center text-xs text-slate-400">
+            Tekan tombol silang di kanan atas untuk kembali.
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl border border-white/10 text-xs font-semibold flex items-center gap-2.5">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+        <span id="toast-msg">Berhasil!</span>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // --- 1. DATA STATE (Simulasi Database MySQL sesuai PRD Section 7) ---
+        const state = {
+            currentUser: null,
+            activeSection: 'home',
+            filterLaporan: 'Semua',
+            adminTab: 'cctv',
+            users: [
+                { id: 1, userid: 'FKDM', passid: '321', nama: 'Pengurus FKDM Kelurahan', role: 'Pengurus FKDM' },
+                { id: 2, userid: 'ADMIN', passid: 'admin123', nama: 'Administrator Sistem', role: 'Admin' },
+                { id: 3, userid: 'KADER01', passid: '123', nama: 'Budi Santoso (Kader RW 05)', role: 'Kader / Petugas' }
+            ],
+            cctvList: [
+                {
+                    id: 1,
+                    nama: 'Suryopranoto view Harmoni',
+                    kategori: 'Jalan utama',
+                    alamat: 'Jl. Suryopranoto (Arah Harmoni)',
+                    koordinat: '502032-Jl-Suryopranoto-C01_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502032-Jl-Suryopranoto-C01_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3MzE1fQ.98mgV1ht2846xBoFFxb8ub0M4TYV9jfsqyCJHRiiwlk'
+                },
+                {
+                    id: 2,
+                    nama: 'Suryopranoto view Perempatan Kesehatan',
+                    kategori: 'Jalan utama',
+                    alamat: 'Jl. Suryopranoto (Perempatan Kesehatan)',
+                    koordinat: '502032-Jl-Suryopranoto-C01_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502032-Jl-Suryopranoto-C01_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3MzE1fQ.98mgV1ht2846xBoFFxb8ub0M4TYV9jfsqyCJHRiiwlk'
+                },
+                {
+                    id: 3,
+                    nama: 'Harmoni view Istana',
+                    kategori: 'Jalan utama',
+                    alamat: 'Simpang Harmoni (Arah Istana)',
+                    koordinat: '501464_JKP_SATPOLPP_HARMONI-C01_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501464_JKP_SATPOLPP_HARMONI-C01_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3NDU2fQ.UHEpWgN3d4-qjPDqKQYyghQieJGLMykFTQqxADnuKKk'
+                },
+                {
+                    id: 4,
+                    nama: 'Harmoni view Gajah Mada Akses BTN',
+                    kategori: 'Jalan utama',
+                    alamat: 'Simpang Harmoni (Gajah Mada Akses BTN)',
+                    koordinat: '501464_JKP_SATPOLPP_HARMONI-C01_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501464_JKP_SATPOLPP_HARMONI-C01_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3MDE5fQ.DsSY07ZBwxLV1CiGCujqvV670WtLY7khFIGea_KnZR4'
+                },
+                {
+                    id: 5,
+                    nama: 'Gajah Mada view Pertigaan Lion',
+                    kategori: 'Jalan utama',
+                    alamat: 'Jl. Gajah Mada (Pertigaan Lion)',
+                    koordinat: '501465_JKP_SATPOLPP_HARMONI-C02_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501465_JKP_SATPOLPP_HARMONI-C02_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3NTE0fQ.3Vc4LjrEz5KjfHqwI6QFHzhFTzkaNQzHDYjq799cdNc'
+                },
+                {
+                    id: 6,
+                    nama: 'Gajah Mada view K. H. Hasyim Ashari',
+                    kategori: 'Jalan utama',
+                    alamat: 'Jl. Gajah Mada (Simpang KH Hasyim Ashari)',
+                    koordinat: '501465_JKP_SATPOLPP_HARMONI-C02_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501465_JKP_SATPOLPP_HARMONI-C02_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3NTE0fQ.3Vc4LjrEz5KjfHqwI6QFHzhFTzkaNQzHDYjq799cdNc'
+                },
+                {
+                    id: 7,
+                    nama: 'K. H. Zainul Arifin view Arah Gajah Mada',
+                    kategori: 'Fasilitas umum',
+                    alamat: 'JPO Jl. KH Zainul Arifin (Arah Gajah Mada)',
+                    koordinat: '502669-JPO-Jl-Kyai-Haji-Zainul-Arifin-C01_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502669-JPO-Jl-Kyai-Haji-Zainul-Arifin-C01_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3NjIwfQ.pePgzT4IHKNzK42BMVjFtutpStaGCTrygiDRiF4O5Y4'
+                },
+                {
+                    id: 8,
+                    nama: 'K. H. Zainul Arifin view Arah A. M. Sangaji',
+                    kategori: 'Fasilitas umum',
+                    alamat: 'JPO Jl. KH Zainul Arifin (Arah A. M. Sangaji)',
+                    koordinat: '502669-JPO-Jl-Kyai-Haji-Zainul-Arifin-C01_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502669-JPO-Jl-Kyai-Haji-Zainul-Arifin-C01_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3NjIwfQ.pePgzT4IHKNzK42BMVjFtutpStaGCTrygiDRiF4O5Y4'
+                },
+                {
+                    id: 9,
+                    nama: 'Cideng Timur RW 04 (1)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. Cideng Timur RW 04 (Kamera 1)',
+                    koordinat: '503227-Jl-Cideng-Timur-C01_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/503227-Jl-Cideng-Timur-C01_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3Njk0fQ.48sW8u6fjN1kLsqQ_cYYKOIrSY2hKygfKIdfef9St14'
+                },
+                {
+                    id: 10,
+                    nama: 'Cideng Timur RW 04 (2)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. Cideng Timur RW 04 (Kamera 2)',
+                    koordinat: '503227-Jl-Cideng-Timur-C01_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/503227-Jl-Cideng-Timur-C01_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NTA3Njk0fQ.48sW8u6fjN1kLsqQ_cYYKOIrSY2hKygfKIdfef9St14'
+                },
+                {
+                    id: 11,
+                    nama: 'Cideng Timur RW 05 (1)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. Cideng Timur RW 05 (Kamera 1)',
+                    koordinat: '503233-Jl-Cideng-Timur-C02_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/503233-Jl-Cideng-Timur-C02_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzNTQ3fQ.ttlWnqauOwH2q6K31afqCoeBO6ckqHKexyqr6KufT1g'
+                },
+                {
+                    id: 12,
+                    nama: 'Cideng Timur RW 05 (2)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. Cideng Timur RW 05 (Kamera 2)',
+                    koordinat: '503233-Jl-Cideng-Timur-C02_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/503233-Jl-Cideng-Timur-C02_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzNTQ3fQ.ttlWnqauOwH2q6K31afqCoeBO6ckqHKexyqr6KufT1g'
+                },
+                {
+                    id: 13,
+                    nama: 'K. H. Hasyim Ashari RW 02 (1)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 02 (Kamera 1)',
+                    koordinat: '502034-Jl-KH-Hasyim-Ashari-C04_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502034-Jl-KH-Hasyim-Ashari-C04_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzNjY4fQ.vXL-3ArYm1GKh-1JvtwxZRUEjq-8K4gl5Q70sJajtT8'
+                },
+                {
+                    id: 14,
+                    nama: 'K. H. Hasyim Ashari RW 02 (2)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 02 (Kamera 2)',
+                    koordinat: '502034-Jl-KH-Hasyim-Ashari-C04_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502034-Jl-KH-Hasyim-Ashari-C04_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzNjY4fQ.vXL-3ArYm1GKh-1JvtwxZRUEjq-8K4gl5Q70sJajtT8'
+                },
+                {
+                    id: 15,
+                    nama: 'K. H. Hasyim Ashari RW 07 (1)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 07 (Kamera 1)',
+                    koordinat: '501841_JKP_DISHUB_JL.-KH-HASYIM-ASHARI-C03_CCTV--01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501841_JKP_DISHUB_JL.-KH-HASYIM-ASHARI-C03_CCTV--01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzOTc4fQ.26Yju2v1UfG7aHXR5fM8NREnQ8oY8d8KdGuciYdoVxY'
+                },
+                {
+                    id: 16,
+                    nama: 'K. H. Hasyim Ashari RW 07 (2)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 07 (Kamera 2)',
+                    koordinat: '501841_JKP_DISHUB_JL.-KH-HASYIM-ASHARI-C03_CCTV--02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/501841_JKP_DISHUB_JL.-KH-HASYIM-ASHARI-C03_CCTV--02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzYzOTc4fQ.26Yju2v1UfG7aHXR5fM8NREnQ8oY8d8KdGuciYdoVxY'
+                },
+                {
+                    id: 17,
+                    nama: 'A. M. Sangaji RW 05 (1)',
+                    kategori: 'Area rawan gangguan keamanan',
+                    alamat: 'Simpang Jl. KH Hasyim Ashari - A. M. Sangaji RW 05 (1)',
+                    koordinat: '502516-Simpang-Jl-KH-Hasyim-Ashari-C04_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502516-Simpang-Jl-KH-Hasyim-Ashari-C04_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzY0MDY5fQ.pEVh7zlEHy4p6Kk8Nb1zYyagPgscfXYdh4T0AOLQWHE'
+                },
+                {
+                    id: 18,
+                    nama: 'A. M. Sangaji RW 05 (2)',
+                    kategori: 'Area rawan gangguan keamanan',
+                    alamat: 'Simpang Jl. KH Hasyim Ashari - A. M. Sangaji RW 05 (2)',
+                    koordinat: '502516-Simpang-Jl-KH-Hasyim-Ashari-C04_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502516-Simpang-Jl-KH-Hasyim-Ashari-C04_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzY0MDY5fQ.pEVh7zlEHy4p6Kk8Nb1zYyagPgscfXYdh4T0AOLQWHE'
+                },
+                {
+                    id: 19,
+                    nama: 'K. H. Hasyim Ashari RW 04 (1)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 04 (Kamera 1)',
+                    koordinat: '502033-Jl-KH-Hasyim-Ashari-C03_CCTV-02',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502033-Jl-KH-Hasyim-Ashari-C03_CCTV-02/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lIjoiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzY0MTMxfQ.UV873FzUj_zoXXvbXpIuClbVseRp2R4FwaUaGlOUJds'
+                },
+                {
+                    id: 20,
+                    nama: 'K. H. Hasyim Ashari RW 04 (2)',
+                    kategori: 'Area permukiman',
+                    alamat: 'Jl. KH Hasyim Ashari RW 04 (Kamera 2)',
+                    koordinat: '502033-Jl-KH-Hasyim-Ashari-C03_CCTV-01',
+                    status: 'Online',
+                    url: 'https://cctv-diskominfotik.balitower.co.id:10211/502033-Jl-KH-Hasyim-Ashari-C03_CCTV-01/embed.html?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyNVdON0lFUm95TWNOQllkejMwdCIsInVzZXJuYW1lOioiS0VMVVJBSEFOX1BFVE9KTyIsImlwX2FkZHJlc3MiOiIxNzIuMTYuNDMuMjQwIiwidXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTcuMC4wLjAgU2FmYXJpLzUzNy4zNiIsInNjb3BlcyI6WyJzdHJlYW0iXSwiZXhwIjoxNzk1NzY0MTMxfQ.UV873FzUj_zoXXvbXpIuClbVseRp2R4FwaUaGlOUJds'
+                }
+            ],
+            nomorPenting: [
+                { id: 1, nama: 'Wirayudha Bayu Sejati', kategori: 'Pemerintahan', ket: 'Lurah Kel. Petojo Utara', telepon: '081383795299', wa: '6281383795299' },
+                { id: 2, nama: 'Deny Kuswanto', kategori: 'Pemerintahan', ket: 'Kasi Pemerintahan Kel. Petojo Utara', telepon: '082112948948', wa: '6282112948948' },
+                { id: 3, nama: 'Rizky', kategori: 'Pemerintahan', ket: 'Kasi Ekonomi dan Pembangunan Kel. Petojo Utara', telepon: '082399490032', wa: '6282399490032' },
+                { id: 4, nama: 'Siswanto', kategori: 'Keamanan FKDM', ket: 'Babinsa Kel. Petojo Utara', telepon: '081282166838', wa: '6281282166838' },
+                { id: 5, nama: 'Irvan', kategori: 'Kepolisian', ket: 'Bimas Kel. Petojo Utara', telepon: '083117171731', wa: '6283117171731' },
+                { id: 6, nama: 'Teguh', kategori: 'Keamanan FKDM', ket: 'Satgas Pol PP Kel. Petojo Utara', telepon: '081219988999', wa: '6281219988999' },
+                { id: 7, nama: 'Mandor Agus', kategori: 'Layanan Darurat', ket: 'Satgas Kel. Petojo Utara', telepon: '085814100016', wa: '6285814100016' },
+                { id: 8, nama: 'Guruh', kategori: 'Pemerintahan', ket: 'Satpel Bina Marga Kec. Gambir', telepon: '08388439410', wa: '628388439410' },
+                { id: 9, nama: 'Firdaus', kategori: 'Pemerintahan', ket: 'Kasatpel Perhubungan Kec. Gambir', telepon: '081385666933', wa: '6281385666933' },
+                { id: 10, nama: 'Azizah', kategori: 'Pemerintahan', ket: 'Satpel Sosial Kec. Gambir', telepon: '081282755563', wa: '6281282755563' },
+                { id: 11, nama: 'Mumu', kategori: 'Pemerintahan', ket: 'Kasatpel LH Kec. Gambir', telepon: '081310884942', wa: '6281310884942' },
+                { id: 12, nama: 'Heri', kategori: 'Kebencanaan', ket: 'SDA Kec. Gambir', telepon: '087885672997', wa: '6287885672997' },
+                { id: 13, nama: 'Dimas', kategori: 'Pemerintahan', ket: 'Kasatpel Pertamanan Kec. Gambir', telepon: '08151851079', wa: '628151851079' },
+                { id: 14, nama: 'Call Centre Kedaruratan', kategori: 'Layanan Darurat', ket: 'Call Centre 112', telepon: '112', wa: '62112' },
+                { id: 15, nama: 'PLN 108', kategori: 'Layanan Darurat', ket: 'Call Centre PLN 108', telepon: '108', wa: '62108' },
+                { id: 16, nama: 'PLN UP3 Menteng - Pemasaran', kategori: 'Pemerintahan', ket: 'PLN UP3 Menteng - Pemasaran', telepon: '08111211233', wa: '628111211233' },
+                { id: 17, nama: 'PLN Menteng 05', kategori: 'Pemerintahan', ket: 'PLN Menteng 05', telepon: '08118086808', wa: '628118086808' },
+                { id: 18, nama: 'PLN UP3 Menteng 1', kategori: 'Pemerintahan', ket: 'PLN UP3 Menteng 1', telepon: '08111086817', wa: '628111086817' },
+                { id: 19, nama: 'PLN UP3 Menteng 2', kategori: 'Pemerintahan', ket: 'PLN UP3 Menteng 2', telepon: '08111086812', wa: '628111086812' },
+                { id: 20, nama: 'PLN UP3 Menteng 3', kategori: 'Pemerintahan', ket: 'PLN UP3 Menteng 3', telepon: '08111086814', wa: '628111086814' }
+            ],
+            laporanList: [
+                { id: 'LAP-20261113-001', tanggal: '2026-11-13', waktu: '14:20', nama: 'Ahmad Fauzi', hp: '081299887766', kategori: 'Gangguan Lingkungan', lokasi: 'Jl. Danau Sunter Barat RT 04/RW 02', deskripsi: 'Saluran air tersumbat sampah ranting pohon berpotensi genangan saat hujan deras.', status: 'Diproses' },
+                { id: 'LAP-20261112-002', tanggal: '2026-11-12', waktu: '22:45', nama: 'Siti Rahmawati', hp: '081344556677', kategori: 'Aktivitas Mencurigakan', lokasi: 'Taman Publik RW 08', deskripsi: 'Kerumunan remaja hingga larut malam berpotensi tawuran, sudah dikoordinasikan ke Bhabinkamtibmas.', status: 'Selesai' },
+                { id: 'LAP-20261113-003', tanggal: '2026-11-13', waktu: '18:10', nama: 'Hendra Wijaya', hp: '085611223344', kategori: 'Keamanan dan Ketertiban', lokasi: 'Jl. Sunter Agung Tengah', deskripsi: 'Lampu penerangan jalan umum (PJU) padam di 3 titik.', status: 'Menunggu' },
+                { id: 'LAP-20261110-004', tanggal: '2026-11-10', waktu: '09:15', nama: 'Rina Marlina', hp: '087899001122', kategori: 'Kebakaran', lokasi: 'Area Kosong Jl. Agung Utara', deskripsi: 'Laporan pembakaran sampah liar yang sudah berhasil dipadamkan warga.', status: 'Selesai' }
+            ],
+            petugasLaporan: [
+                { id: 1, nama: 'Angga', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=293741650#gid=293741650' },
+                { id: 2, nama: 'Hadi', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=1249600859#gid=1249600859' },
+                { id: 3, nama: 'Juanita', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=1118220463#gid=1118220463' },
+                { id: 4, nama: 'Sahri', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=655351926#gid=655351926' },
+                { id: 5, nama: 'Waluyo', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=983509698#gid=983509698' },
+                { id: 6, nama: 'Yuki', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=592421118#gid=592421118' },
+                { id: 7, nama: 'Zainuddin', jabatan: 'Anggota FKDM Kel. Petojo Utara', url: 'https://docs.google.com/spreadsheets/d/1vdTdNC6mwxJ0RIT-uQKOC_TcyBYg8H6laeMWryezHlc/edit?gid=1159091995#gid=1159091995' }
+            ],
+            
+        };
+
+        // --- 2. FUNGSI AUTENTIKASI (PRD Section 2) ---
+        function enterLoginPage() {
+            document.getElementById('cover-view').classList.add('hidden');
+            document.getElementById('login-view').classList.remove('hidden');
+        }
+
+        function backToCover() {
+            document.getElementById('login-view').classList.add('hidden');
+            document.getElementById('cover-view').classList.remove('hidden');
+        }
+
+        function fillDemo() {
+            document.getElementById('userid').value = 'FKDM';
+            document.getElementById('passid').value = '321';
+            document.getElementById('login-error').classList.add('hidden');
+        }
+
+        function resetLoginForm() {
+            document.getElementById('login-form').reset();
+            document.getElementById('login-error').classList.add('hidden');
+        }
+
+        function togglePassword() {
+            const input = document.getElementById('passid');
+            const icon = document.getElementById('eye-icon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const uid = document.getElementById('userid').value.trim();
+            const pid = document.getElementById('passid').value.trim();
+            const errBox = document.getElementById('login-error');
+
+            const foundUser = state.users.find(u => u.userid.toUpperCase() === uid.toUpperCase() && u.passid === pid);
+
+            if (foundUser) {
+                state.currentUser = foundUser;
+                errBox.classList.add('hidden');
+                document.getElementById('login-view').classList.add('hidden');
+                document.getElementById('app-view').classList.remove('hidden');
+                document.getElementById('welcome-user').textContent = foundUser.nama;
+                document.getElementById('sidebar-user-role').textContent = `${foundUser.role} • Online`;
+                navigateTo('home');
+                showToast(`Selamat datang, ${foundUser.nama}!`);
+            } else {
+                errBox.classList.remove('hidden');
+                document.getElementById('login-error-text').textContent = 'User ID atau Pass ID tidak valid! Gunakan FKDM / 321.';
+            }
+        }
+
+        function handleLogout() {
+            state.currentUser = null;
+            resetLoginForm();
+            document.getElementById('app-view').classList.add('hidden');
+            document.getElementById('login-view').classList.remove('hidden');
+            toggleSidebar(false);
+        }
+
+        // --- 3. NAVIGASI & HEADER (PRD Section 3 & 5) ---
+        function navigateTo(section) {
+            if (!state.currentUser) return; // Proteksi session
+            state.activeSection = section;
+
+            const sections = ['home', 'profil', 'cctv', 'laporan', 'nomor', 'informasi', 'admin'];
+            sections.forEach(s => {
+                document.getElementById(`section-${s}`).classList.add('hidden');
+            });
+            document.getElementById(`section-${section}`).classList.remove('hidden');
+
+            const titles = {
+                home: 'HOME',
+                profil: 'PROFIL KELURAHAN',
+                cctv: 'PEMANTAUAN CCTV',
+                laporan: 'LAPORAN KEJADIAN',
+                nomor: 'NOMOR PENTING',
+                informasi: 'INFORMASI & BERITA',
+                admin: 'ADMIN PANEL'
+            };
+            document.getElementById('header-title').textContent = titles[section] || 'HOME';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Render konten dinamis
+            if (section === 'home') renderHomeHighlights();
+            if (section === 'cctv') renderCCTV();
+            if (section === 'laporan') renderLaporan();
+            if (section === 'nomor') renderNomorPenting();
+            if (section === 'informasi') renderInformasi();
+            if (section === 'admin') renderAdminPanel();
+        }
+
+        function toggleSidebar(show) {
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            if (show) {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        }
+
+        function toggleGlobalSearch() {
+            const bar = document.getElementById('global-search-bar');
+            bar.classList.toggle('hidden');
+            if (!bar.classList.contains('hidden')) {
+                document.getElementById('global-search-input').focus();
+            }
+        }
+
+        function performGlobalSearch(query) {
+            const resBox = document.getElementById('global-search-results');
+            resBox.innerHTML = '';
+            const q = query.trim().toLowerCase();
+            if (!q) return;
+
+            const results = [];
+            state.cctvList.forEach(c => {
+                if (c.nama.toLowerCase().includes(q) || c.alamat.toLowerCase().includes(q)) {
+                    results.push({ type: 'CCTV', title: c.nama, sub: c.alamat, action: () => navigateTo('cctv') });
+                }
+            });
+            state.nomorPenting.forEach(n => {
+                if (n.nama.toLowerCase().includes(q) || n.telepon.includes(q)) {
+                    results.push({ type: 'Kontak', title: n.nama, sub: n.telepon, action: () => navigateTo('nomor') });
+                }
+            });
+            state.informasiList.forEach(i => {
+                if (i.judul.toLowerCase().includes(q)) {
+                    results.push({ type: 'Info', title: i.judul, sub: i.kategori, action: () => navigateTo('informasi') });
+                }
+            });
+
+            results.slice(0, 5).forEach(r => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs flex items-center justify-between';
+                btn.innerHTML = `<div><span class="px-1.5 py-0.5 rounded bg-cyan-500/30 text-cyan-200 text-[10px] font-bold mr-2">${r.type}</span><span class="font-semibold">${r.title}</span></div><span class="text-slate-400 text-[11px]">${r.sub}</span>`;
+                btn.onclick = () => { toggleGlobalSearch(); r.action(); };
+                resBox.appendChild(btn);
+            });
+        }
+
+        function handleRefresh() {
+            const icon = document.getElementById('refresh-icon');
+            icon.classList.add('fa-spin');
+            setTimeout(() => {
+                icon.classList.remove('fa-spin');
+                navigateTo(state.activeSection);
+                showToast('Data berhasil disegarkan');
+            }, 500);
+        }
+
+        // --- 4. RENDER HOME HIGHLIGHTS ---
+        function renderHomeHighlights() {
+            const totalCctv = state.cctvList.length;
+            const onlineCctv = state.cctvList.filter(c => c.status === 'Online').length;
+            document.getElementById('stat-cctv-online').parentElement.innerHTML = `<span id="stat-cctv-online">${onlineCctv}</span>/${totalCctv} Online`;
+            document.getElementById('stat-laporan-total').textContent = state.laporanList.length;
+
+            const infoContainer = document.getElementById('home-info-list');
+            infoContainer.innerHTML = state.informasiList.slice(0, 3).map(info => `
+                <div onclick="openInfoModal(${info.id})" class="p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/70 border border-slate-200/70 cursor-pointer transition">
+                    <div class="flex items-center justify-between text-[11px] mb-1">
+                        <span class="font-bold text-indigo-600">${info.kategori}</span>
+                        <span class="text-slate-400">${info.tanggal}</span>
+                    </div>
+                    <div class="font-bold text-xs sm:text-sm text-slate-800 line-clamp-1">${info.judul}</div>
+                </div>
+            `).join('');
+
+            const lapContainer = document.getElementById('home-laporan-list');
+            lapContainer.innerHTML = state.laporanList.slice(0, 3).map(lap => `
+                <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <div class="text-[11px] font-mono text-slate-400">${lap.id} &bull; ${lap.kategori}</div>
+                        <div class="font-bold text-xs sm:text-sm text-slate-800 truncate">${lap.lokasi}</div>
+                    </div>
+                    ${getStatusBadge(lap.status)}
+                </div>
+            `).join('');
+        }
+
+        // --- 5. RENDER CCTV (PRD Section 4.2) ---
+        function renderCCTV() {
+            const filter = document.getElementById('filter-cctv-kategori').value;
+            const grid = document.getElementById('cctv-grid');
+            const filtered = filter === 'Semua' ? state.cctvList : state.cctvList.filter(c => c.kategori === filter);
+
+            grid.innerHTML = filtered.map(cam => {
+                const isOnline = cam.status === 'Online';
+                return `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+                    <div class="relative aspect-video bg-slate-900 flex items-center justify-center overflow-hidden">
+                        ${isOnline ? `
+                            ${cam.url ? `
+                                <iframe src="${cam.url}" class="w-full h-full border-0" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            ` : `
+                                <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-950 to-slate-900 flex flex-col items-center justify-center text-center p-4">
+                                    <i class="fa-solid fa-video text-3xl text-cyan-400/70 mb-2"></i>
+                                    <span class="text-[11px] font-mono text-cyan-200">STREAM AKTIF &bull; CAM-${String(cam.id).padStart(2, '0')}</span>
+                                    <span class="text-[10px] text-slate-400 mt-0.5">${cam.koordinat}</span>
+                                </div>
+                                <div class="absolute inset-0 cctv-scanline pointer-events-none"></div>
+                            `}
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-emerald-500/90 text-white text-[10px] font-bold flex items-center gap-1.5 pointer-events-none">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-live"></span> ONLINE
+                            </span>
+                            <button onclick="openCCTVFullscreen(${cam.id})" title="Fullscreen" class="absolute bottom-3 right-3 p-2 rounded-xl bg-black/70 hover:bg-blue-600 text-white text-xs transition z-10">
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        ` : `
+                            <div class="text-center text-slate-500 p-4">
+                                <i class="fa-solid fa-video-slash text-3xl mb-2 text-rose-500/70"></i>
+                                <div class="text-xs font-bold text-slate-400">SINYAL TERPUTUS</div>
+                            </div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-rose-600 text-white text-[10px] font-bold">
+                                OFFLINE
+                            </span>
+                        `}
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">${cam.kategori}</span>
+                            <h3 class="font-bold text-sm text-slate-800 mt-1.5">${cam.nama}</h3>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot text-slate-400"></i> ${cam.alamat}
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-[11px] text-slate-400 font-mono">
+                            <span class="truncate">${cam.koordinat}</span>
+                            ${isOnline ? `
+                                <div class="flex items-center gap-2.5 shrink-0 font-sans">
+                                    ${cam.url ? `<a href="${cam.url}" target="_blank" rel="noopener noreferrer" class="text-slate-600 font-bold hover:text-blue-600"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
+                                    <button onclick="openCCTVFullscreen(${cam.id})" class="text-blue-600 font-bold hover:underline">Layar Penuh</button>
+                                </div>
+                            ` : '<span>Maintenance</span>'}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        let cctvClockInterval = null;
+        function openCCTVFullscreen(id) {
+            const cam = state.cctvList.find(c => c.id === id);
+            if (!cam) return;
+            document.getElementById('modal-cctv-title').textContent = cam.nama;
+            document.getElementById('modal-cctv-coord').textContent = `${cam.alamat} (${cam.koordinat})`;
+            
+            const iframe = document.getElementById('cctv-fullscreen-iframe');
+            const extLink = document.getElementById('modal-cctv-ext-link');
+            iframe.src = cam.url || '';
+            if (cam.url) {
+                extLink.href = cam.url;
+                extLink.classList.remove('hidden');
+            } else {
+                extLink.classList.add('hidden');
+            }
+
+            document.getElementById('modal-cctv').classList.remove('hidden');
+            document.getElementById('modal-cctv-clock').textContent = new Date().toLocaleTimeString('id-ID');
+            if (cctvClockInterval) clearInterval(cctvClockInterval);
+            cctvClockInterval = setInterval(() => {
+                document.getElementById('modal-cctv-clock').textContent = new Date().toLocaleTimeString('id-ID');
+            }, 1000);
+        }
+
+        // --- 6. RENDER & CRUD LAPORAN (PRD Section 4.3) ---
+        function getStatusBadge(status) {
+            const map = {
+                'Menunggu': 'bg-amber-100 text-amber-800 border-amber-200',
+                'Diproses': 'bg-blue-100 text-blue-800 border-blue-200',
+                'Selesai': 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                'Ditolak': 'bg-rose-100 text-rose-800 border-rose-200'
+            };
+            return `<span class="px-2.5 py-1 rounded-full text-[11px] font-bold border ${map[status] || 'bg-slate-100'}">${status}</span>`;
+        }
+
+        function setFilterLaporan(status) {
+            state.filterLaporan = status;
+            document.querySelectorAll('.laporan-filter-btn').forEach(btn => {
+                if (btn.textContent === status) {
+                    btn.className = 'laporan-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-blue-600 text-white';
+                } else {
+                    btn.className = 'laporan-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200';
+                }
+            });
+            renderLaporan();
+        }
+
+        function renderLaporan() {
+            // Render Daftar Petugas FKDM & Link Embed
+            const petugasGrid = document.getElementById('petugas-laporan-grid');
+            if (petugasGrid) {
+                petugasGrid.innerHTML = state.petugasLaporan.map(p => {
+                    const isSelected = state.activePetugasId === p.id;
+                    return `
+                    <button onclick="openLaporanEmbed(${p.id})" class="w-full text-left p-3 rounded-2xl border transition flex items-center justify-between gap-3 ${isSelected ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-slate-50 hover:bg-blue-50 text-slate-800 border-slate-200/80'}">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 bg-slate-200 border border-slate-300/50">
+                                <img src="ikon_profil.png" alt="Profil" class="w-full h-full object-cover">
+                            </div>
+                            <div class="min-w-0">
+                                <div class="font-bold text-xs truncate">${p.nama}</div>
+                                <div class="text-[10px] truncate ${isSelected ? 'text-blue-100' : 'text-slate-500'}">${p.jabatan}</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold shrink-0 flex items-center gap-1 ${isSelected ? 'bg-white text-blue-700' : 'bg-emerald-100 text-emerald-700'}">
+                            <i class="fa-solid fa-table"></i> ${isSelected ? 'Terbuka' : 'Buka Laporan'}
+                        </span>
+                    </button>`;
+                }).join('');
+            }
+
+            const list = document.getElementById('laporan-list');
+            const filtered = state.filterLaporan === 'Semua'
+                ? state.laporanList
+                : state.laporanList.filter(l => l.status === state.filterLaporan);
+
+            list.innerHTML = filtered.map(lap => `
+                <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <span class="text-xs font-mono font-bold text-blue-600">${lap.id}</span>
+                            ${getStatusBadge(lap.status)}
+                        </div>
+                        <span class="inline-block px-2.5 py-0.5 rounded-lg bg-slate-100 text-slate-700 text-[11px] font-semibold mb-2">${lap.kategori}</span>
+                        <h4 class="font-bold text-sm text-slate-800">${lap.lokasi}</h4>
+                        <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">${lap.deskripsi}</p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                        <div>
+                            <i class="fa-solid fa-user text-slate-400 mr-1"></i> ${lap.nama} &bull; ${lap.tanggal} (${lap.waktu})
+                        </div>
+                        <select onchange="updateStatusLaporan('${lap.id}', this.value)" class="text-[11px] font-semibold bg-slate-50 border border-slate-200 rounded-lg px-2 py-1 text-slate-700">
+                            <option value="Menunggu" ${lap.status === 'Menunggu' ? 'selected' : ''}>Menunggu</option>
+                            <option value="Diproses" ${lap.status === 'Diproses' ? 'selected' : ''}>Diproses</option>
+                            <option value="Selesai" ${lap.status === 'Selesai' ? 'selected' : ''}>Selesai</option>
+                            <option value="Ditolak" ${lap.status === 'Ditolak' ? 'selected' : ''}>Ditolak</option>
+                        </select>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openLaporanModal() {
+            const now = new Date();
+            const rand = String(state.laporanList.length + 1).padStart(3, '0');
+            document.getElementById('lap-id').value = `LAP-20261113-${rand}`;
+            document.getElementById('modal-laporan').classList.remove('hidden');
+        }
+
+        function submitLaporan(e) {
+            e.preventDefault();
+            const now = new Date();
+            const newLap = {
+                id: document.getElementById('lap-id').value,
+                tanggal: now.toISOString().split('T')[0],
+                waktu: now.toTimeString().slice(0, 5),
+                nama: document.getElementById('lap-nama').value,
+                hp: document.getElementById('lap-hp').value,
+                kategori: document.getElementById('lap-kategori').value,
+                lokasi: document.getElementById('lap-lokasi').value,
+                deskripsi: document.getElementById('lap-deskripsi').value,
+                status: 'Menunggu'
+            };
+            state.laporanList.unshift(newLap);
+            closeModal('modal-laporan');
+            e.target.reset();
+            renderLaporan();
+            showToast('Laporan kejadian berhasil dikirim!');
+        }
+
+        function updateStatusLaporan(id, newStatus) {
+            const item = state.laporanList.find(l => l.id === id);
+            if (item) {
+                item.status = newStatus;
+                renderLaporan();
+                showToast(`Status ${id} diubah menjadi ${newStatus}`);
+            }
+        }
+
+        function openLaporanEmbed(id) {
+            const petugas = state.petugasLaporan.find(p => p.id === id);
+            if (!petugas) return;
+
+            state.activePetugasId = id;
+            const container = document.getElementById('laporan-embed-container');
+            const iframe = document.getElementById('laporan-embed-iframe');
+            const title = document.getElementById('laporan-embed-title');
+            const extLink = document.getElementById('laporan-embed-ext');
+
+            // Format URL Google Sheets agar tampil optimal di dalam iframe
+            const embedUrl = petugas.url.replace('/edit?', '/preview?');
+            title.textContent = `Laporan Monitoring - ${petugas.nama}`;
+            iframe.src = embedUrl;
+            extLink.href = petugas.url;
+
+            container.classList.remove('hidden');
+            renderLaporan();
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            showToast(`Membuka laporan ${petugas.nama}`);
+        }
+
+        function closeLaporanEmbed() {
+            state.activePetugasId = null;
+            const container = document.getElementById('laporan-embed-container');
+            const iframe = document.getElementById('laporan-embed-iframe');
+            iframe.src = '';
+            container.classList.add('hidden');
+            renderLaporan();
+        }
+
+        // --- 7. RENDER NOMOR PENTING (PRD Section 4.4) ---
+        function renderNomorPenting() {
+            const q = document.getElementById('search-nomor').value.toLowerCase();
+            const grid = document.getElementById('nomor-grid');
+            const filtered = state.nomorPenting.filter(n =>
+                n.nama.toLowerCase().includes(q) || n.kategori.toLowerCase().includes(q) || n.telepon.includes(q)
+            );
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <span class="px-2.5 py-0.5 rounded-lg bg-rose-50 text-rose-600 text-[11px] font-bold">${item.kategori}</span>
+                        <h4 class="font-bold text-base text-slate-800 mt-2">${item.nama}</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">${item.ket}</p>
+                        <div class="mt-3 text-lg font-extrabold font-mono text-blue-700">${item.telepon}</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2.5 mt-4 pt-4 border-t border-slate-100">
+                        <a href="tel:${item.telepon}" class="py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-solid fa-phone"></i> Call
+                        </a>
+                        <a href="https://wa.me/${item.wa}" target="_blank" class="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- 8. RENDER INFORMASI (PRD Section 4.5) ---
+        function renderInformasi() {
+            const kat = document.getElementById('filter-info-kategori').value;
+            const grid = document.getElementById('informasi-grid');
+            const filtered = kat === 'Semua' ? state.informasiList : state.informasiList.filter(i => i.kategori === kat);
+
+            grid.innerHTML = filtered.map(info => `
+                <div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="px-2.5 py-0.5 rounded-lg bg-indigo-50 text-indigo-700 font-bold text-[11px]">${info.kategori}</span>
+                            <span class="text-slate-400 text-[11px]">${info.tanggal}</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-800 leading-snug">${info.judul}</h4>
+                        <p class="text-xs text-slate-600 mt-2 line-clamp-3 leading-relaxed">${info.isi}</p>
+                    </div>
+                    <button onclick="openInfoModal(${info.id})" class="mt-4 pt-3 border-t border-slate-100 text-left text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center justify-between">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function openInfoModal(id) {
+            const info = state.informasiList.find(i => i.id === id);
+            if (!info) return;
+            document.getElementById('modal-info-kat').textContent = info.kategori;
+            document.getElementById('modal-info-tgl').textContent = `Dipublikasikan: ${info.tanggal}`;
+            document.getElementById('modal-info-judul').textContent = info.judul;
+            document.getElementById('modal-info-isi').textContent = info.isi;
+            document.getElementById('modal-info').classList.remove('hidden');
+        }
+
+        function openImageModal(title, src) {
+            document.getElementById('modal-zoom-title').textContent = title;
+            document.getElementById('modal-zoom-img').src = src;
+            document.getElementById('modal-image-zoom').classList.remove('hidden');
+        }
+
+        // --- 9. ADMIN PANEL (PRD Section 5) ---
+        function switchAdminTab(tab) {
+            state.adminTab = tab;
+            const labels = { cctv: 'Manajemen CCTV', nomor: 'Manajemen Nomor Penting', info: 'Manajemen Informasi', users: 'Manajemen Pengguna (RBAC)' };
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                if (btn.textContent === labels[tab]) {
+                    btn.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white';
+                } else {
+                    btn.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200';
+                }
+            });
+            renderAdminPanel();
+        }
+
+        function renderAdminPanel() {
+            const box = document.getElementById('admin-content');
+            if (state.adminTab === 'cctv') {
+                box.innerHTML = `
+                    <h3 class="font-bold text-base text-slate-800 mb-4">Daftar Perangkat CCTV Terdaftar</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-50 text-slate-600 border-b">
+                                <tr><th class="p-3">Nama Kamera</th><th class="p-3">Kategori</th><th class="p-3">Status</th><th class="p-3">Aksi</th></tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                ${state.cctvList.map(c => `
+                                    <tr>
+                                        <td class="p-3 font-semibold">${c.nama}</td>
+                                        <td class="p-3">${c.kategori}</td>
+                                        <td class="p-3"><span class="px-2 py-0.5 rounded font-bold ${c.status === 'Online' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}">${c.status}</span></td>
+                                        <td class="p-3"><button onclick="toggleCCTVStatus(${c.id})" class="text-blue-600 font-bold hover:underline">Ubah Status</button></td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>`;
+            } else if (state.adminTab === 'nomor') {
+                box.innerHTML = `
+                    <h3 class="font-bold text-base text-slate-800 mb-3">Tambah Kontak Darurat Baru</h3>
+                    <form onsubmit="addNomorAdmin(event)" class="grid grid-cols-1 sm:grid-cols-4 gap-2 mb-5">
+                        <input id="adm-nom-nama" required placeholder="Nama Instansi" class="px-3 py-2 rounded-xl border text-xs">
+                        <input id="adm-nom-kat" required placeholder="Kategori (mis: Kepolisian)" class="px-3 py-2 rounded-xl border text-xs">
+                        <input id="adm-nom-telp" required placeholder="Nomor Telepon" class="px-3 py-2 rounded-xl border text-xs">
+                        <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs">+ Tambah Kontak</button>
+                    </form>
+                    <div class="space-y-2 text-xs">
+                        ${state.nomorPenting.map(n => `
+                            <div class="p-3 rounded-xl bg-slate-50 flex items-center justify-between">
+                                <div><span class="font-bold">${n.nama}</span> (${n.kategori}) - <span class="font-mono text-blue-700">${n.telepon}</span></div>
+                                <button onclick="deleteNomor(${n.id})" class="text-rose-600 font-bold hover:underline">Hapus</button>
+                            </div>
+                        `).join('')}
+                    </div>`;
+            } else if (state.adminTab === 'info') {
+                box.innerHTML = `
+                    <h3 class="font-bold text-base text-slate-800 mb-3">Publikasi Pengumuman / Berita Baru</h3>
+                    <form onsubmit="addInfoAdmin(event)" class="space-y-2.5 mb-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <input id="adm-info-judul" required placeholder="Judul Informasi / Pengumuman" class="px-3 py-2 rounded-xl border text-xs">
+                            <select id="adm-info-kat" class="px-3 py-2 rounded-xl border text-xs">
+                                <option value="Pengumuman">Pengumuman</option>
+                                <option value="Kegiatan Kelurahan">Kegiatan Kelurahan</option>
+                                <option value="Keamanan dan Ketertiban">Keamanan dan Ketertiban</option>
+                                <option value="Kebencanaan">Kebencanaan</option>
+                            </select>
+                        </div>
+                        <textarea id="adm-info-isi" required rows="2" placeholder="Isi pengumuman..." class="w-full px-3 py-2 rounded-xl border text-xs"></textarea>
+                        <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs">Terbitkan Informasi</button>
+                    </form>`;
+            } else if (state.adminTab === 'users') {
+                box.innerHTML = `
+                    <h3 class="font-bold text-base text-slate-800 mb-4">Daftar Akun & Hak Akses (RBAC)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-slate-50 text-slate-600 border-b">
+                                <tr><th class="p-3">User ID</th><th class="p-3">Nama Pengguna</th><th class="p-3">Role / Hak Akses</th></tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                ${state.users.map(u => `
+                                    <tr>
+                                        <td class="p-3 font-mono font-bold text-blue-700">${u.userid}</td>
+                                        <td class="p-3 font-semibold">${u.nama}</td>
+                                        <td class="p-3"><span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">${u.role}</span></td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>`;
+            }
+        }
+
+        function toggleCCTVStatus(id) {
+            const cam = state.cctvList.find(c => c.id === id);
+            if (cam) {
+                cam.status = cam.status === 'Online' ? 'Offline' : 'Online';
+                renderAdminPanel();
+                showToast(`Status ${cam.nama} diubah ke ${cam.status}`);
+            }
+        }
+
+        function addNomorAdmin(e) {
+            e.preventDefault();
+            const telp = document.getElementById('adm-nom-telp').value;
+            state.nomorPenting.push({
+                id: Date.now(),
+                nama: document.getElementById('adm-nom-nama').value,
+                kategori: document.getElementById('adm-nom-kat').value,
+                telepon: telp,
+                wa: telp.replace(/^0/, '62'),
+                ket: 'Kontak Terdaftar Admin'
+            });
+            renderAdminPanel();
+            showToast('Kontak darurat ditambahkan');
+        }
+
+        function deleteNomor(id) {
+            state.nomorPenting = state.nomorPenting.filter(n => n.id !== id);
+            renderAdminPanel();
+            showToast('Kontak dihapus');
+        }
+
+        function addInfoAdmin(e) {
+            e.preventDefault();
+            state.informasiList.unshift({
+                id: Date.now(),
+                judul: document.getElementById('adm-info-judul').value,
+                kategori: document.getElementById('adm-info-kat').value,
+                tanggal: '13 Nov 2026',
+                isi: document.getElementById('adm-info-isi').value
+            });
+            e.target.reset();
+            showToast('Informasi baru berhasil diterbitkan!');
+        }
+
+        // --- 10. UTILITIES ---
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            if (id === 'modal-cctv') {
+                const iframe = document.getElementById('cctv-fullscreen-iframe');
+                if (iframe) iframe.src = '';
+                if (cctvClockInterval) {
+                    clearInterval(cctvClockInterval);
+                    cctvClockInterval = null;
+                }
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+
+        // Live Clock di Dashboard
+        setInterval(() => {
+            const now = new Date();
+            const clockEl = document.getElementById('live-clock');
+            if (clockEl) clockEl.textContent = now.toLocaleTimeString('id-ID');
+        }, 1000);
+    </script>
+</body>
+</html>
