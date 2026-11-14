@@ -1414,90 +1414,245 @@
             `).join('');
         }
 
-        // --- 5. RENDER CCTV (PRD Section 4.2) ---
-        function renderCCTV() {
-            const filter = document.getElementById('filter-cctv-kategori').value;
-            const grid = document.getElementById('cctv-grid');
-            const filtered = filter === 'Semua' ? state.cctvList : state.cctvList.filter(c => c.kategori === filter);
+// Menyimpan ID kamera yang sedang aktif
+let activeCCTVId = null;
 
-            grid.innerHTML = filtered.map(cam => {
-                const isOnline = cam.status === 'Online';
-                return `
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
-                    <div class="relative aspect-video bg-slate-900 flex items-center justify-center overflow-hidden">
-                        ${isOnline ? `
-                            ${cam.url ? `
-                                <iframe src="${cam.url}" class="w-full h-full border-0" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            ` : `
-                                <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-950 to-slate-900 flex flex-col items-center justify-center text-center p-4">
-                                    <i class="fa-solid fa-video text-3xl text-cyan-400/70 mb-2"></i>
-                                    <span class="text-[11px] font-mono text-cyan-200">STREAM AKTIF &bull; CAM-${String(cam.id).padStart(2, '0')}</span>
-                                    <span class="text-[10px] text-slate-400 mt-0.5">${cam.koordinat}</span>
-                                </div>
-                                <div class="absolute inset-0 cctv-scanline pointer-events-none"></div>
-                            `}
-                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-emerald-500/90 text-white text-[10px] font-bold flex items-center gap-1.5 pointer-events-none">
-                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-live"></span> ONLINE
-                            </span>
-                            <button onclick="openCCTVFullscreen(${cam.id})" title="Fullscreen" class="absolute bottom-3 right-3 p-2 rounded-xl bg-black/70 hover:bg-blue-600 text-white text-xs transition z-10">
-                                <i class="fa-solid fa-expand"></i>
-                            </button>
-                        ` : `
-                            <div class="text-center text-slate-500 p-4">
-                                <i class="fa-solid fa-video-slash text-3xl mb-2 text-rose-500/70"></i>
-                                <div class="text-xs font-bold text-slate-400">SINYAL TERPUTUS</div>
+        
+// --- RENDER CCTV DENGAN LAZY LOADING ---
+function renderCCTV() {
+    const filter = document.getElementById('filter-cctv-kategori').value;
+    const grid = document.getElementById('cctv-grid');
+
+    const filtered = filter === 'Semua'
+        ? state.cctvList
+        : state.cctvList.filter(c => c.kategori === filter);
+
+    // Hentikan kamera jika tidak termasuk dalam filter aktif
+    if (activeCCTVId !== null &&
+        !filtered.some(c => c.id === activeCCTVId)) {
+        activeCCTVId = null;
+    }
+
+    grid.innerHTML = filtered.map(cam => {
+        const isOnline = cam.status === 'Online';
+        const isActive = activeCCTVId === cam.id;
+
+        return `
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+
+            <!-- AREA STREAMING CCTV -->
+            <div class="relative aspect-video bg-slate-900 flex items-center justify-center overflow-hidden"
+                 id="cctv-stream-${cam.id}">
+
+                ${isOnline ? (
+
+                    isActive && cam.url ? `
+                        <!-- IFRAME HANYA UNTUK KAMERA YANG DIPILIH -->
+                        <iframe
+                            src="${cam.url}"
+                            title="${cam.nama}"
+                            class="w-full h-full border-0"
+                            allow="autoplay; fullscreen"
+                            allowfullscreen>
+                        </iframe>
+
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-emerald-500/90 text-white text-[10px] font-bold flex items-center gap-1.5 pointer-events-none z-10">
+                            <span class="w-1.5 h-1.5 rounded-full bg-white animate-live"></span>
+                            STREAM AKTIF
+                        </span>
+
+                        <button
+                            onclick="stopCCTV(${cam.id})"
+                            class="absolute top-3 right-3 px-2.5 py-1.5 rounded-lg bg-rose-600/90 hover:bg-rose-700 text-white text-[10px] font-bold z-20">
+                            <i class="fa-solid fa-stop mr-1"></i> STOP
+                        </button>
+
+                        <button
+                            onclick="openCCTVFullscreen(${cam.id})"
+                            title="Layar Penuh"
+                            class="absolute bottom-3 right-3 p-2.5 rounded-xl bg-black/70 hover:bg-blue-600 text-white text-xs transition z-20">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+
+                    ` : `
+                        <!-- PREVIEW: STREAMING BELUM DIJALANKAN -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-950 to-slate-900 flex flex-col items-center justify-center text-center p-4">
+
+                            <i class="fa-solid fa-video text-4xl text-cyan-400/80 mb-3"></i>
+
+                            <div class="text-xs font-bold text-white">
+                                ${cam.nama}
                             </div>
-                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-rose-600 text-white text-[10px] font-bold">
-                                OFFLINE
+
+                            <span class="text-[10px] text-slate-400 mt-1">
+                                ${cam.koordinat}
                             </span>
-                        `}
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-between">
-                        <div>
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">${cam.kategori}</span>
-                            <h3 class="font-bold text-sm text-slate-800 mt-1.5">${cam.nama}</h3>
-                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
-                                <i class="fa-solid fa-location-dot text-slate-400"></i> ${cam.alamat}
-                            </p>
+
+                            ${cam.url ? `
+                                <button
+                                    onclick="loadCCTV(${cam.id})"
+                                    class="mt-4 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white text-xs font-bold shadow-lg transition active:scale-95 flex items-center gap-2">
+                                    <i class="fa-solid fa-play"></i>
+                                    Tampilkan CCTV
+                                </button>
+                            ` : `
+                                <span class="mt-3 text-[10px] text-amber-300">
+                                    URL streaming belum tersedia
+                                </span>
+                            `}
+
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-slate-600/80 text-white text-[10px] font-bold">
+                                SIAP DITAMPILKAN
+                            </span>
                         </div>
-                        <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-[11px] text-slate-400 font-mono">
-                            <span class="truncate">${cam.koordinat}</span>
-                            ${isOnline ? `
-                                <div class="flex items-center gap-2.5 shrink-0 font-sans">
-                                    ${cam.url ? `<a href="${cam.url}" target="_blank" rel="noopener noreferrer" class="text-slate-600 font-bold hover:text-blue-600"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
-                                    <button onclick="openCCTVFullscreen(${cam.id})" class="text-blue-600 font-bold hover:underline">Layar Penuh</button>
-                                </div>
-                            ` : '<span>Maintenance</span>'}
+                    `
+
+                ) : `
+                    <!-- KAMERA OFFLINE -->
+                    <div class="text-center text-slate-500 p-4">
+                        <i class="fa-solid fa-video-slash text-3xl mb-2 text-rose-500/70"></i>
+                        <div class="text-xs font-bold text-slate-400">
+                            SINYAL TERPUTUS
                         </div>
                     </div>
-                </div>`;
-            }).join('');
-        }
+
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-rose-600 text-white text-[10px] font-bold">
+                        OFFLINE
+                    </span>
+                `}
+
+            </div>
+
+            <!-- INFORMASI KAMERA -->
+            <div class="p-4 flex-1 flex flex-col justify-between">
+
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">
+                        ${cam.kategori}
+                    </span>
+
+                    <h3 class="font-bold text-sm text-slate-800 mt-1.5">
+                        ${cam.nama}
+                    </h3>
+
+                    <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                        <i class="fa-solid fa-location-dot text-slate-400"></i>
+                        ${cam.alamat}
+                    </p>
+                </div>
+
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-[11px] text-slate-400 font-mono">
+
+                    <span class="truncate">${cam.koordinat}</span>
+
+                    <span class="shrink-0 font-sans font-bold ${
+                        isActive
+                            ? 'text-emerald-600'
+                            : isOnline
+                                ? 'text-blue-600'
+                                : 'text-rose-600'
+                    }">
+                        ${
+                            isActive
+                                ? 'LIVE'
+                                : isOnline
+                                    ? 'STANDBY'
+                                    : 'OFFLINE'
+                        }
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        `;
+    }).join('');
+}
+
+
+// --- MENAMPILKAN SATU CCTV BERDASARKAN PILIHAN ---
+function loadCCTV(id) {
+    const cam = state.cctvList.find(c => c.id === id);
+
+    if (!cam || cam.status !== 'Online' || !cam.url) {
+        showToast('Kamera tidak tersedia!');
+        return;
+    }
+
+    // Mengganti kamera aktif secara otomatis
+    // Kamera sebelumnya akan dihapus dari DOM
+    activeCCTVId = id;
+
+    renderCCTV();
+
+    // Arahkan tampilan ke kamera yang dipilih
+    const selectedCam = document.getElementById(`cctv-stream-${id}`);
+
+    if (selectedCam) {
+        selectedCam.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+
+    showToast(`Menampilkan CCTV: ${cam.nama}`);
+}
+
+
+// --- MENGHENTIKAN STREAMING CCTV ---
+function stopCCTV(id) {
+    if (activeCCTVId !== id) return;
+
+    // Menghapus iframe sehingga streaming berhenti
+    activeCCTVId = null;
+
+    renderCCTV();
+
+    showToast('Streaming CCTV dihentikan');
+}
+
 
         let cctvClockInterval = null;
-        function openCCTVFullscreen(id) {
-            const cam = state.cctvList.find(c => c.id === id);
-            if (!cam) return;
-            document.getElementById('modal-cctv-title').textContent = cam.nama;
-            document.getElementById('modal-cctv-coord').textContent = `${cam.alamat} (${cam.koordinat})`;
-            
-            const iframe = document.getElementById('cctv-fullscreen-iframe');
-            const extLink = document.getElementById('modal-cctv-ext-link');
-            iframe.src = cam.url || '';
-            if (cam.url) {
-                extLink.href = cam.url;
-                extLink.classList.remove('hidden');
-            } else {
-                extLink.classList.add('hidden');
-            }
+        
+function openCCTVFullscreen(id) {
+    const cam = state.cctvList.find(c => c.id === id);
 
-            document.getElementById('modal-cctv').classList.remove('hidden');
-            document.getElementById('modal-cctv-clock').textContent = new Date().toLocaleTimeString('id-ID');
-            if (cctvClockInterval) clearInterval(cctvClockInterval);
-            cctvClockInterval = setInterval(() => {
-                document.getElementById('modal-cctv-clock').textContent = new Date().toLocaleTimeString('id-ID');
-            }, 1000);
+    if (!cam || !cam.url) return;
+
+    // Hentikan iframe CCTV di daftar sebelum membuka fullscreen
+    activeCCTVId = null;
+    renderCCTV();
+
+    document.getElementById('modal-cctv-title').textContent = cam.nama;
+
+    document.getElementById('modal-cctv-coord').textContent =
+        `${cam.alamat} (${cam.koordinat})`;
+
+    const iframe = document.getElementById('cctv-fullscreen-iframe');
+    const extLink = document.getElementById('modal-cctv-ext-link');
+
+    iframe.src = cam.url;
+
+    extLink.href = cam.url;
+    extLink.classList.remove('hidden');
+
+    document.getElementById('modal-cctv').classList.remove('hidden');
+
+    document.getElementById('modal-cctv-clock').textContent =
+        new Date().toLocaleTimeString('id-ID');
+
+    if (cctvClockInterval) {
+        clearInterval(cctvClockInterval);
+    }
+
+    cctvClockInterval = setInterval(() => {
+        const clock = document.getElementById('modal-cctv-clock');
+
+        if (clock) {
+            clock.textContent = new Date().toLocaleTimeString('id-ID');
         }
+    }, 1000);
+}
+
 
         // --- 6. RENDER & CRUD LAPORAN (PRD Section 4.3) ---
         function getStatusBadge(status) {
@@ -1852,10 +2007,12 @@
             document.getElementById(id).classList.add('hidden');
             if (id === 'modal-cctv') {
                 const iframe = document.getElementById('cctv-fullscreen-iframe');
-                if (iframe) iframe.src = '';
-                if (cctvClockInterval) {
-                    clearInterval(cctvClockInterval);
-                    cctvClockInterval = null;
+
+             if (iframe) iframe.src = '';
+
+             if (cctvClockInterval) {
+                  clearInterval(cctvClockInterval);
+                   cctvClockInterval = null;
                 }
             }
         }
