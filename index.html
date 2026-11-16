@@ -136,6 +136,26 @@ body {
         rgba(6, 20, 46, 0.45);
 }
 
+/* Perbaikan Tampilan Cover SIPMONWIL */
+#cover-view {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Gambar cover diberi jarak dari batas atas */
+#cover-view .cover-image {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 20px);
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+}
+
 /* =========================================
    COVER FULL SCREEN
 ========================================= */
@@ -225,56 +245,26 @@ body {
     <!-- ==================== MOBILE APP WRAPPER ==================== -->
     <div id="mobile-frame" class="mobile-shell future-tech-bg flex flex-col">
 
-  
-<!-- COVER SPLASH SCREEN -->
-<div id="cover-view"
-     class="relative overflow-hidden text-white select-none bg-black">
 
-    <!-- Background Cover -->
-    <img
-        src="cover.jpg"
-        alt="SIPMONWIL - Sistem Informasi Pengendalian Monitoring Wilayah Kelurahan Petojo Utara"
-        class="absolute inset-0 w-full h-full object-cover object-center"
-        draggable="false"
-    >
+<div id="cover-view" class="flex-1 relative overflow-hidden text-white select-none bg-black">
 
-    <!-- Overlay -->
-    <div class="absolute inset-0
-                bg-gradient-to-t
-                from-black/60
-                via-transparent
-                to-transparent
-                pointer-events-none">
-    </div>
+    <!-- Gambar Cover dengan Jarak Aman di Bagian Atas -->
+    <img src="cover.jpg"
+         alt="SIPMONWIL - Sistem Informasi Pengendalian Monitoring Wilayah Kelurahan Petojo Utara"
+         class="cover-image">
+
+    <!-- Overlay gelap -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
 
     <!-- Tombol MASUK -->
-    <div class="absolute bottom-0 left-0 right-0 z-20
-                flex flex-col items-center
-                px-5 pt-6">
-
-        <button
-            type="button"
-            onclick="enterLoginPage()"
-            class="btn-neon-blue
-                   w-64 max-w-full
-                   py-3.5 px-8
-                   rounded-full
-                   text-white font-black text-base
-                   tracking-[0.2em] uppercase
-                   transition-all duration-300
-                   active:scale-95
-                   flex items-center justify-center
-                   gap-3 cursor-pointer shadow-2xl">
-
+    <div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center pb-10 pt-6">
+        <button onclick="enterLoginPage()"
+                class="btn-neon-blue w-64 py-3.5 px-8 rounded-full text-white font-black text-base tracking-[0.2em] uppercase transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-3 cursor-pointer shadow-2xl">
             <span>MASUK</span>
-
-            <i class="fa-solid fa-arrow-right-to-bracket
-                      text-cyan-200">
-            </i>
-
+            <i class="fa-solid fa-arrow-right-to-bracket text-cyan-200"></i>
         </button>
-
     </div>
+
 </div>
 
 
