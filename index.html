@@ -101,27 +101,123 @@
                 radial-gradient(circle at 50% 42%, rgba(30, 58, 138, 0.28) 0%, transparent 60%),
                 linear-gradient(180deg, #010208 0%, #03091e 50%, #020512 100%);
         }
-        /* Mobile App Shell Styling */
-        .mobile-shell {
-            max-width: 430px;
-            margin: 0 auto;
-            min-height: 100vh;
-            position: relative;
-            box-shadow: 0 25px 50px -12px rgba(6, 20, 46, 0.45);
-        }
-        @media (min-width: 640px) {
-            body {
-                background-color: #0f172a;
-                background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #090d16 100%);
-                padding: 16px 0;
-            }
-            .mobile-shell {
-                min-height: calc(100vh - 32px);
-                border-radius: 36px;
-                border: 6px solid #1e293b;
-                overflow-x: hidden;
-            }
-        }
+        
+/* =========================================
+   MOBILE APP SHELL - STABIL
+========================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mobile-shell {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+
+    /* Tinggi stabil pada perangkat mobile */
+    min-height: 100svh;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+
+    box-shadow: 0 25px 50px -12px
+        rgba(6, 20, 46, 0.45);
+}
+
+/* =========================================
+   COVER FULL SCREEN
+========================================= */
+
+#cover-view {
+    position: relative;
+
+    /* Tidak mengikuti perubahan tinggi address bar */
+    flex: 0 0 100svh;
+
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Gambar cover */
+#cover-view > img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Tombol MASUK */
+#cover-view > div:last-child {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding-bottom: calc(
+        24px + env(safe-area-inset-bottom)
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   DESKTOP / TABLET
+========================================= */
+
+@media (min-width: 640px) {
+
+    body {
+        background-color: #0f172a;
+        background-image:
+            radial-gradient(
+                circle at 50% 0%,
+                #1e293b 0%,
+                #090d16 100%
+            );
+
+        padding: 16px 0;
+    }
+
+    .mobile-shell {
+        min-height: calc(100svh - 32px);
+        max-width: 430px;
+
+        border-radius: 36px;
+        border: 6px solid #1e293b;
+
+        overflow: hidden;
+    }
+
+    #cover-view {
+        flex-basis: calc(100svh - 44px);
+        height: calc(100svh - 44px);
+        min-height: calc(100svh - 44px);
+    }
+}
+
     </style>
 </head>
 <body class="bg-slate-200 font-sans text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
@@ -129,26 +225,58 @@
     <!-- ==================== MOBILE APP WRAPPER ==================== -->
     <div id="mobile-frame" class="mobile-shell future-tech-bg flex flex-col">
 
-   <!-- ==================== 0. HALAMAN AWAL (COVER SPLASH SCREEN) ==================== -->
-<div id="cover-view" class="flex-1 relative overflow-hidden text-white select-none bg-black">
-    
-    <!-- Gambar Cover Full-Screen -->
-    <img src="cover.jpg" 
-         alt="SIPMONWIL - Sistem Informasi Pengendalian Monitoring Wilayah Kelurahan Petojo Utara" 
-         class="absolute inset-0 w-full h-full object-cover object-center">
+  
+<!-- COVER SPLASH SCREEN -->
+<div id="cover-view"
+     class="relative overflow-hidden text-white select-none bg-black">
 
-    <!-- Overlay gelap tipis agar tombol lebih jelas -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+    <!-- Background Cover -->
+    <img
+        src="cover.jpg"
+        alt="SIPMONWIL - Sistem Informasi Pengendalian Monitoring Wilayah Kelurahan Petojo Utara"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        draggable="false"
+    >
 
-    <!-- Tombol MASUK Efek Neon Biru (di bagian bawah) -->
-    <div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center pb-10 pt-6">
-        <button onclick="enterLoginPage()" 
-                class="btn-neon-blue w-64 py-3.5 px-8 rounded-full text-white font-black text-base tracking-[0.2em] uppercase transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-3 cursor-pointer shadow-2xl">
+    <!-- Overlay -->
+    <div class="absolute inset-0
+                bg-gradient-to-t
+                from-black/60
+                via-transparent
+                to-transparent
+                pointer-events-none">
+    </div>
+
+    <!-- Tombol MASUK -->
+    <div class="absolute bottom-0 left-0 right-0 z-20
+                flex flex-col items-center
+                px-5 pt-6">
+
+        <button
+            type="button"
+            onclick="enterLoginPage()"
+            class="btn-neon-blue
+                   w-64 max-w-full
+                   py-3.5 px-8
+                   rounded-full
+                   text-white font-black text-base
+                   tracking-[0.2em] uppercase
+                   transition-all duration-300
+                   active:scale-95
+                   flex items-center justify-center
+                   gap-3 cursor-pointer shadow-2xl">
+
             <span>MASUK</span>
-            <i class="fa-solid fa-arrow-right-to-bracket text-cyan-200"></i>
+
+            <i class="fa-solid fa-arrow-right-to-bracket
+                      text-cyan-200">
+            </i>
+
         </button>
+
     </div>
 </div>
+
 
     <!-- ==================== 1. HALAMAN LOGIN ==================== -->
     <div id="login-view" class="hidden flex-1 flex flex-col justify-center items-center p-5 relative overflow-hidden">
